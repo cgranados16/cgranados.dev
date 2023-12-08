@@ -14,7 +14,12 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@cgranados.dev/portfolio/ui": ["libs/portfolio/ui/src/index.ts"],
+      "@cgranados.dev/shared/config": ["libs/shared/config/src/index.ts"],
+      "@cgranados.dev/ui": ["libs/shared/ui/src/index.ts"],
+      "@cgranados.dev/ui/*": ["libs/shared/ui/src/*"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
