@@ -1,0 +1,29 @@
+{
+  "name": "carlosgranados.dev-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/carlosgranados.dev-e2e/src",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/carlosgranados.dev-e2e/cypress.config.ts",
+        "testingType": "e2e",
+        "devServerTarget": "carlosgranados.dev:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "carlosgranados.dev:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/carlosgranados.dev-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["carlosgranados.dev"]
+}
