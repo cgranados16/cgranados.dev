@@ -1,13 +1,11 @@
-import { getGreeting } from '../support/app.po';
+describe('Portfolio Page', () => {
+  it('successfully loads and displays elements', () => {
+    cy.visit('/'); // change this to the path of your page if it's not the home page
 
-describe('portfolio-e2e', () => {
-  beforeEach(() => cy.visit('/'));
-
-  it('should display welcome message', () => {
-    // Custom command example, see `../support/commands.ts` file
-    cy.login('my-email@something.com', 'myPassword');
-
-    // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains(/Welcome/);
+    cy.get('div.container.relative').within(() => {
+      cy.get('h1').within(() => {
+        cy.contains('Portfolio'); // checks for the heading
+      });
+    });
   });
 });
