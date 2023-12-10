@@ -9,7 +9,7 @@ import { ModeToggle } from './ModeToggle';
 
 export const Header = () => {
   return (
-    <header className="border-b">
+    <header className="sticky top-0 z-50 w-full border-b">
       <nav
         className="container flex py-2 items-center justify-between"
         aria-label="Global"
@@ -31,7 +31,7 @@ export const Header = () => {
           </Link>
         </div>
         <div className="hidden lg:flex lg:gap-x-12"></div>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end space-x-2">
+        <div className="lg:flex lg:flex-1 lg:justify-end space-x-2">
           <Link
             href={siteConfig.links.github}
             target="_blank"

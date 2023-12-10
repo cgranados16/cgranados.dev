@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "@storybook/addon-themes": "^7.6.4"
+  }
+}

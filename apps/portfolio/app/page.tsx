@@ -1,9 +1,16 @@
-import {
-  Button,
-  PageHeader,
-  PageHeaderDescription,
-  PageHeaderHeading,
-} from '@cgranados.dev/ui';
+const Hero: React.FC = () => {
+  return (
+    <section className="absolute py-24 flex md:items-center min-h-screen">
+      <div className="lg:mb-36">
+        <p className="text-4xl lg:text-7xl font-bold text-gray-400">Hi, I am</p>
+        <h1 className="text-4xl lg:text-9xl font-bold">Carlos Granados</h1>
+        <h2 id="animated-title" className="text-2xl lg:text-7xl font-bold">
+          Computer Engineer
+        </h2>
+      </div>
+    </section>
+  );
+};
 
 export default async function Index() {
   /*
@@ -13,13 +20,7 @@ export default async function Index() {
    */
   return (
     <div className="container relative">
-      <PageHeader>
-        <PageHeaderHeading>Portfolio</PageHeaderHeading>
-        <PageHeaderDescription>Welcome</PageHeaderDescription>
-        <div className="flex w-full items-center space-x-4 pb-8 pt-4 md:pb-10">
-          <Button>Hello World</Button>
-        </div>
-      </PageHeader>
+      <Hero />
     </div>
   );
 }
