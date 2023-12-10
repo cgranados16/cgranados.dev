@@ -21,11 +21,11 @@ export const Header = () => {
               buttonVariants({
                 variant: 'link',
               }),
-              'flex items-center space-x-2 text-current'
+              'flex items-center space-x-2 text-current',
             )}
           >
             <TentTree />
-            <span className="hidden font-bold sm:inline-block text-lg">
+            <span className="font-bold sm:inline-block text-lg">
               cgranados.dev
             </span>
           </Link>
@@ -40,7 +40,7 @@ export const Header = () => {
               buttonVariants({
                 variant: 'ghost',
               }),
-              'w-9 px-0'
+              'w-9 px-0',
             )}
           >
             <Icons.GitHub className="h-6 w-6" />
