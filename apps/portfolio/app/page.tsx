@@ -1,4 +1,4 @@
-import { Hero } from '@cgranados.dev/portfolio/ui';
+import { Hero, StarsSection } from '@cgranados.dev/portfolio/ui';
 
 export default async function Index() {
   /*
@@ -9,6 +9,7 @@ export default async function Index() {
   return (
     <div className="container relative">
       <Hero />
+      <StarsSection />
     </div>
   );
 }
