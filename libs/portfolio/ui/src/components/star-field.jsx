@@ -10,8 +10,10 @@ function Stars(props) {
     inSphere(new Float32Array(5000), { radius: 1.5 }),
   );
   useFrame((state, delta) => {
-    ref.current.rotation.x -= delta / 20;
-    ref.current.rotation.y -= delta / 30;
+    if (ref.current) {
+      ref.current.rotation.x -= delta / 20;
+      ref.current.rotation.y -= delta / 30;
+    }
   });
   return (
     <group rotation={[0, 0, Math.PI / 4]}>

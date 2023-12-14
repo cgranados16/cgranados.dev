@@ -1,6 +1,6 @@
 'use client';
 import { useRef } from 'react';
-import { StarField } from '../components/star-field';
+import { StarField } from '../components/star-field.jsx';
 import { motion, useInView } from 'framer-motion';
 
 export function StarsSection() {
