@@ -9,7 +9,7 @@ import { ModeToggle } from './ModeToggle';
 
 export const Header = () => {
   return (
-    <header className="sticky top-0 z-50 w-full border-b">
+    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
       <nav
         className="container flex py-2 items-center justify-between"
         aria-label="Global"
