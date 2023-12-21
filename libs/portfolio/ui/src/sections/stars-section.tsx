@@ -1,27 +1,29 @@
 'use client';
-import { useRef } from 'react';
 import { StarField } from '../components/star-field.jsx';
-import { motion, useInView } from 'framer-motion';
-
-export function StarsSection() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
+import { motion } from 'framer-motion';
+export const StarFieldContainer: React.FC = ({ children }) => {
   return (
-    <section className="relative min-h-screen flex justify-center items-center mb-16">
+    <div className="relative min-h-screen flex justify-center items-center mb-16">
       <div className="absolute top-0 w-screen h-full">
         <StarField />
       </div>
-      <motion.h2
-        ref={ref}
-        className="text-7xl font-bold text-center relative z-10"
-        style={{
-          opacity: isInView ? 1 : 0,
-          transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
-        }}
-      >
-        I will help you build your dream website
-      </motion.h2>
-    </section>
+      <div className="relative z-10">{children}</div>
+    </div>
+  );
+};
+
+export function StarsSection() {
+  return (
+    <StarFieldContainer>
+      <section className="min-h-screen flex justify-center items-center">
+        <motion.h2
+          className="text-5xl lg:text-7xl font-bold text-center"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+        >
+          I will help you build your dream website
+        </motion.h2>
+      </section>
+    </StarFieldContainer>
   );
 }

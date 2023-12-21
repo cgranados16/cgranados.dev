@@ -2,3 +2,4 @@
 export { Hero } from './components/hero';
 export * from './sections';
 export * from './components/theme-provider';
+export * from './components/features/card';
