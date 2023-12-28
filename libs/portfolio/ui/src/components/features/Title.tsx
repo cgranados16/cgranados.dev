@@ -1,0 +1,30 @@
+import { forwardRef } from 'react';
+import { cn } from '../../../../../shared/ui/src/utils';
+
+type TitleProps = {
+  children: React.ReactNode;
+  className?: string;
+};
+
+const Title = forwardRef(
+  ({ children, className }: TitleProps, ref: Ref<HTMLDivElement>) => {
+    return (
+      <h2
+        className={cn(
+          'text-3xl font-bold leading-tight tracking-tighter md:text-5xl lg:leading-[1.1]',
+          className,
+        )}
+        ref={ref}
+      >
+        {children}
+      </h2>
+    );
+  },
+);
+
+const TitleHighlight = ({ text, color }) => {
+  let textColor = color ? `text-${color}-600` : null;
+  return <span className={cn(textColor)}>{text}</span>;
+};
+
+export { Title, TitleHighlight };
