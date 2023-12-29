@@ -1,7 +1,14 @@
 'use client';
 import { StarField } from '../components/star-field.jsx';
 import { motion } from 'framer-motion';
-export const StarFieldContainer: React.FC = ({ children }) => {
+
+type StarFieldContainerProps = {
+  children?: React.ReactNode;
+};
+
+export const StarFieldContainer: React.FC<StarFieldContainerProps> = ({
+  children,
+}) => {
   return (
     <div className="relative min-h-screen flex justify-center items-center mb-16">
       <div className="absolute top-0 w-screen h-full">

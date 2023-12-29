@@ -7,7 +7,20 @@ import {
   CardTitle,
 } from '@cgranados.dev/ui';
 import { cn } from '@cgranados.dev/ui/utils';
-export function FeaturesCard({ title, description, color, children }) {
+
+type FeaturesCardProps = {
+  title: string;
+  description: string;
+  color?: string;
+  children?: React.ReactNode;
+};
+
+export function FeaturesCard({
+  title,
+  description,
+  color,
+  children,
+}: FeaturesCardProps) {
   const textColor = color ? `text-${color}-600` : null;
   return (
     <Card>

@@ -29,7 +29,7 @@ const TypeWriter = () => {
 
 export function Hero() {
   return (
-    <section className="py-12 flex md:items-center min-h-screen relative">
+    <section className="py-12 flex flex-col md:justify-center min-h-screen">
       <div className="lg:mb-36">
         <h1 className="text-4xl lg:text-9xl font-bold">
           <span className="text-4xl lg:text-7xl font-bold text-gray-600/75 dark:text-gray-400/75">
