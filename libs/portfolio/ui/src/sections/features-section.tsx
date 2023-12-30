@@ -16,12 +16,13 @@ export function Feature({ title, xValues, children }: FeatureProps) {
   const scrollRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: scrollRef,
+    offset: ['start start', 'end start'],
   });
-  const x = useTransform(scrollYProgress, [0, 0.5], xValues);
-  const fontSize = useTransform(scrollYProgress, [0, 0.5], ['6rem', '3.5rem']);
+  const x = useTransform(scrollYProgress, [0, 0.3], xValues);
+  const fontSize = useTransform(scrollYProgress, [0, 0.3], ['6rem', '3.5rem']);
   return (
     <div ref={scrollRef}>
-      <div className="flex items-center justify-center sticky top-px pt-16 pb-8 bg-background">
+      <div className="flex items-center justify-center sticky top-px pt-16 pb-8 bg-background mt-96 z-10">
         <MotionTitle className="md:text-8xl" style={{ x, fontSize }}>
           {title.map((t, i) => (
             <span key={i}>{t}</span>
@@ -43,8 +44,26 @@ export function FeaturesSection() {
         ]}
         xValues={['0%', '-76%']}
       >
-        <div className="h-screen bg-slate-900"></div>
-        <div className="h-screen bg-red-900"></div>
+        <motion.div
+          className="h-screen bg-slate-900 my-48"
+          initial={{ opacity: 0, y: '100' }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { delay: 0.2, duration: 0.5 },
+          }}
+          viewport={{ once: true, amount: 0.3 }}
+        ></motion.div>
+        <motion.div
+          className="h-screen bg-red-900 my-48"
+          initial={{ opacity: 0, y: '100' }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { delay: 0.2, duration: 0.5 },
+          }}
+          viewport={{ once: true, amount: 0.3 }}
+        ></motion.div>
       </Feature>
       <Feature
         title={[
@@ -53,7 +72,16 @@ export function FeaturesSection() {
         ]}
         xValues={['0%', '-120%']}
       >
-        <div className="h-screen bg-blue-900"></div>
+        <motion.div
+          className="h-screen bg-blue-900 rounded-xl"
+          initial={{ opacity: 0, y: '100' }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { delay: 0.2, duration: 0.5 },
+          }}
+          viewport={{ once: true, amount: 0.3 }}
+        ></motion.div>
       </Feature>
     </>
   );
