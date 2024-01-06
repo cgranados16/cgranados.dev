@@ -2,7 +2,11 @@
 import { motion } from 'framer-motion';
 import { FeaturesCard } from '../components/features/card';
 
-const AnimatedTitle = ({ children }) => {
+type AnimatedTitleProps = {
+  children: React.ReactNode;
+};
+
+const AnimatedTitle = ({ children }: AnimatedTitleProps) => {
   return (
     <motion.h2
       initial={{ opacity: 0 }}
