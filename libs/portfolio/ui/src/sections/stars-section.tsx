@@ -3,7 +3,7 @@ import { StarField } from '../components/star-field.jsx';
 import { motion } from 'framer-motion';
 
 type StarFieldContainerProps = {
-  children: React.ReactNode;
+  children?: React.ReactNode;
 };
 
 export const StarFieldContainer: React.FC<StarFieldContainerProps> = ({

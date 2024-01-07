@@ -7,6 +7,7 @@ import {
   CardTitle,
 } from '@cgranados.dev/ui';
 import { cn } from '@cgranados.dev/ui/utils';
+
 export type FeaturesCardProps = {
   title: string;
   description?: string;
