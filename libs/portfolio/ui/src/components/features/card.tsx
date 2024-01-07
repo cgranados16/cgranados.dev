@@ -8,11 +8,11 @@ import {
 } from '@cgranados.dev/ui';
 import { cn } from '@cgranados.dev/ui/utils';
 
-type FeaturesCardProps = {
+export type FeaturesCardProps = {
   title: string;
-  description: string;
+  description?: string;
   color?: string;
-  children?: React.ReactNode;
+  children: React.ReactNode;
 };
 
 export function FeaturesCard({
@@ -26,7 +26,7 @@ export function FeaturesCard({
     <Card>
       <CardHeader>
         <CardTitle>{title}</CardTitle>
-        <CardDescription>{description}</CardDescription>
+        {description && <CardDescription>{description}</CardDescription>}
       </CardHeader>
       <CardContent>
         <p className={cn(`font-bold text-9xl text-center`, textColor)}>
