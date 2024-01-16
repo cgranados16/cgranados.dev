@@ -1,101 +1,88 @@
 'use client';
-import { motion } from 'framer-motion';
-import { FeaturesCard } from '../components/features/card';
 
-type AnimatedTitleProps = {
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { Title, TitleHighlight } from '../components/features/Title';
+import { useRef } from 'react';
+
+const MotionTitle = motion(Title, { forwardMotionProps: true });
+
+type FeatureProps = {
+  title: React.ReactNode[];
+  xValues: string[];
   children: React.ReactNode;
 };
 
-const AnimatedTitle = ({ children }: AnimatedTitleProps) => {
+export function Feature({ title, xValues, children }: FeatureProps) {
+  const scrollRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: scrollRef,
+    offset: ['start start', 'end start'],
+  });
+  const x = useTransform(scrollYProgress, [0, 0.3], xValues);
+  const fontSize = useTransform(scrollYProgress, [0, 0.3], ['6rem', '3.5rem']);
   return (
-    <motion.h2
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ amount: 'all' }}
-      className="text-3xl font-bold leading-tight tracking-tighter md:text-7xl lg:leading-[1.1]"
-    >
+    <div ref={scrollRef}>
+      <div className="flex items-center justify-center sticky top-px pt-16 pb-8 bg-background mt-96 z-10">
+        <MotionTitle className="md:text-8xl" style={{ x, fontSize }}>
+          {title.map((t, i) => (
+            <span key={i}>{t}</span>
+          ))}
+        </MotionTitle>
+      </div>
       {children}
-    </motion.h2>
-  );
-};
-
-const OptimizeYourWebsite = () => {
-  return (
-    <div className="min-h-screen flex flex-col space-y-12">
-      <AnimatedTitle>
-        Optimize your <span className="text-red-600">Website</span>
-      </AnimatedTitle>
-      <div className="scroll-m-20 text-2xl font-semibold tracking-tight">
-        Sites that rank on search engines are fast, have well-structured
-        content, and are accessible to everyone.
-      </div>
-      <div className="grid grid-cols-3 gap-5">
-        <FeaturesCard title="Largest Contentful Paint">LCP</FeaturesCard>
-        <FeaturesCard title="First Input Delay" color={'green'}>
-          FID
-        </FeaturesCard>
-        <FeaturesCard title="Cumulative Layout Shift" color="blue">
-          CLS
-        </FeaturesCard>
-      </div>
     </div>
   );
-};
-
-const BoostYourRankings = () => {
-  return (
-    <div className="min-h-screen flex flex-col space-y-12">
-      <AnimatedTitle>
-        Boost your <span className="text-green-600">Rankings</span>
-      </AnimatedTitle>
-      <div className="scroll-m-20 text-2xl font-semibold tracking-tight">
-        Using the latest web technologies and performance optimization
-        techniques, Framer outputs websites that score well on Google
-        Lighthouse, a popular performance analysis tool used to evaluate the
-        quality of web pages. Out of the box, websites created with Framer are
-        optimized for fast loading times, efficient use of resources, and a
-        great user experience, leading to high scores on Google Lighthouse
-        metrics such as First Contentful Paint, Speed Index, and Time to
-        Interactive.
-      </div>
-    </div>
-  );
-};
-
-const CreateUniqueExperiences = () => {
-  return (
-    <div className="min-h-screen flex flex-col space-y-12">
-      <AnimatedTitle>
-        Create Unique <span className="text-blue-600">Experiences</span>
-      </AnimatedTitle>
-      <div className="scroll-m-20 text-2xl font-semibold tracking-tight">
-        {/* Text about UX design */}I love minimalism and simplicity. I believe
-        that less is more, and that the best designs are the ones that are
-        invisible to the user. I also believe that great design is a result of a
-        deep understanding of the problem and the user. I strive to create
-        unique experiences that are simple, intuitive, and delightful. I am
-        passionate about creating products that are not only beautiful, but also
-        functional and accessible.
-      </div>
-    </div>
-  );
-};
+}
 
 export function FeaturesSection() {
   return (
     <>
-      <OptimizeYourWebsite />
-      <BoostYourRankings />
-      <CreateUniqueExperiences />
+      <Feature
+        title={[
+          'Optimize your ',
+          <TitleHighlight text="Website." color={'red'} />,
+        ]}
+        xValues={['0%', '-76%']}
+      >
+        <motion.div
+          className="h-screen bg-slate-900 my-48"
+          initial={{ opacity: 0, y: '100' }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { delay: 0.2, duration: 0.5 },
+          }}
+          viewport={{ once: true, amount: 0.3 }}
+        ></motion.div>
+        <motion.div
+          className="h-screen bg-red-900 my-48"
+          initial={{ opacity: 0, y: '100' }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { delay: 0.2, duration: 0.5 },
+          }}
+          viewport={{ once: true, amount: 0.3 }}
+        ></motion.div>
+      </Feature>
+      <Feature
+        title={[
+          'Boost your ',
+          <TitleHighlight text="Sales." color={'purple'} />,
+        ]}
+        xValues={['0%', '-120%']}
+      >
+        <motion.div
+          className="h-screen bg-blue-900 rounded-xl"
+          initial={{ opacity: 0, y: '100' }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { delay: 0.2, duration: 0.5 },
+          }}
+          viewport={{ once: true, amount: 0.3 }}
+        ></motion.div>
+      </Feature>
     </>
   );
 }
-// export function FeaturesSection() {
-//   return (
-//     <div className="h-screen flex items-center">
-//       <AnimatedTitle>
-//         Optimize your <span className="text-red-600">Website</span>
-//       </AnimatedTitle>
-//     </div>
-//   );
-// }
