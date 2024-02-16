@@ -1,26 +1,30 @@
-Start by
+# cgranados.dev
 
-```zsh
-npx create-nx-workspace@latest`
-```
+Welcome to my portfolio website! This repository contains the source code and assets for my personal portfolio website hosted at [cgranados.dev](https://cgranados.dev).
 
-```zsh
-Where would you like to create your workspace? · carlosgranados.dev
-✔ Which stack do you want to use? · react
-✔ What framework would you like to use? · nextjs
-✔ Integrated monorepo, or standalone project? · integrated
-✔ Application name · portfolio
-✔ Would you like to use the App Router (recommended)? · Yes
-✔ Test runner to use for end to end (E2E) tests · cypress
-✔ Default stylesheet format · css
-✔ Enable distributed caching to make your CI faster · Yes
-```
+## About Me
 
-Then install nx tailwind https://nx.dev/recipes/react/using-tailwind-css-in-react
-also add it to the portfolio project
+I'm Carlos Granados, a passionate Computer Engineer based in Costa Rica.  
+With over 4 years in SEO, I help businesses shine online by boosting their content visibility and website performance.  
+I specialize in creating content-focused applications that delivers high quality and performant websites. I also have a solid understanding of Project Management, Agile Methods and Software Development Cycles to keep projects running smoothly.
 
-And install Shadcn UI
+## Features
 
-```
-npx shadcn-ui@latest init
-```
+## Technologies Used
+
+- Next.js
+- Typescript
+
+## Getting Started
+
+To view my portfolio please visit https://cgranados-dev.vercel.app/
+
+## Feedback
+
+I welcome any feedback or suggestions you may have regarding my portfolio website. Feel free to open an issue here on GitHub or reach out to me via email at cgranados16@gmail.com.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
