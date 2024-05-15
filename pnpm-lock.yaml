@@ -82,6 +82,9 @@ devDependencies:
   '@jscutlery/semver':
     specifier: ^4.2.0
     version: 4.2.0(@nx/devkit@17.2.0)
+  '@nrwl/nx-cloud':
+    specifier: ^19.0.0
+    version: 19.0.0
   '@nx/cypress':
     specifier: 17.2.0
     version: 17.2.0(@swc-node/register@1.6.8)(@swc/core@1.3.100)(@types/node@20.10.4)(cypress@13.6.1)(eslint@8.55.0)(nx@17.2.0)(typescript@5.3.3)
@@ -3302,6 +3305,17 @@ packages:
       - verdaccio
       - webpack
     dev: false
+
+  /@nrwl/nx-cloud@19.0.0:
+    resolution:
+      {
+        integrity: sha512-3WuXq3KKXwKnbjOkYK0OXosjD02LIjC3kEkyMIbaE36O9dMp3k/sa4ZtDVC3tAoIrj17VLVmjKfoDYbED1rapw==,
+      }
+    dependencies:
+      nx-cloud: 19.0.0
+    transitivePeerDependencies:
+      - debug
+    dev: true
 
   /@nrwl/react@17.2.0(@swc-node/register@1.6.8)(@swc/core@1.3.100)(@types/node@20.10.4)(eslint@8.55.0)(nx@17.2.0)(typescript@5.3.3)(webpack@5.89.0):
     resolution:
@@ -10650,6 +10664,14 @@ packages:
       }
     engines: { node: '>=12' }
 
+  /dotenv@10.0.0:
+    resolution:
+      {
+        integrity: sha512-rlBi9d8jpv9Sf1klPjNfFAuWDjKLwTIJJ/VxtoTwIR6hnZxcEOQCZg2oIL3MWBYw5GpUDKOEnND7LXTbIpQ03Q==,
+      }
+    engines: { node: '>=10' }
+    dev: true
+
   /dotenv@16.3.1:
     resolution:
       {
@@ -15898,6 +15920,27 @@ packages:
       }
     dev: true
 
+  /nx-cloud@19.0.0:
+    resolution:
+      {
+        integrity: sha512-Aq1vQD8yBIdb5jLVpzsqmu8yDmMvRVdjaM30Pp1hghhlSvorGBlpTwY+TccZJv/hBtVO+SpXK8SnnegRZMrxdw==,
+      }
+    hasBin: true
+    dependencies:
+      '@nrwl/nx-cloud': 19.0.0
+      axios: 1.6.2
+      chalk: 4.1.2
+      dotenv: 10.0.0
+      fs-extra: 11.2.0
+      node-machine-id: 1.1.12
+      open: 8.4.2
+      strip-json-comments: 3.1.1
+      tar: 6.2.1
+      yargs-parser: 21.1.1
+    transitivePeerDependencies:
+      - debug
+    dev: true
+
   /nx-remotecache-custom@4.2.1(@nx/workspace@17.2.0):
     resolution:
       {
@@ -19103,6 +19146,21 @@ packages:
     resolution:
       {
         integrity: sha512-/Wo7DcT0u5HUV486xg675HtjNd3BXZ6xDbzsCUZPt5iw8bTQ63bP0Raut3mvro9u+CUyq7YQd8Cx55fsZXxqLQ==,
+      }
+    engines: { node: '>=10' }
+    dependencies:
+      chownr: 2.0.0
+      fs-minipass: 2.1.0
+      minipass: 5.0.0
+      minizlib: 2.1.2
+      mkdirp: 1.0.4
+      yallist: 4.0.0
+    dev: true
+
+  /tar@6.2.1:
+    resolution:
+      {
+        integrity: sha512-DZ4yORTwrbTj/7MZYq2w+/ZFdI6OZ/f9SFHR+71gIVUZhOQPHzVCLpvRnPgyaMpfWxxk/4ONva3GQSyNIKRv6A==,
       }
     engines: { node: '>=10' }
     dependencies:
