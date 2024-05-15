@@ -10,7 +10,7 @@ import {
 } from './ui/dropdown-menu';
 import { TentTree, Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
-import { Icons } from './Icons';
+import { Icons } from './icons';
 import Link from 'next/link';
 import { cn } from '../utils';
 import { siteConfig } from '@cgranados.dev/shared/config';

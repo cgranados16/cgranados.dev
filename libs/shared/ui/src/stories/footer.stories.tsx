@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Footer } from '../components/Footer';
+import { Footer } from '../components/footer';
 
 import { within } from '@storybook/testing-library';
 import { expect } from '@storybook/jest';
