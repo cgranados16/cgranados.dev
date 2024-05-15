@@ -75,11 +75,13 @@
       }
     }
   },
-  "nxCloudAccessToken": "YzhkZWFhNDItZmQ0Mi00MDhlLTk4N2UtZmQ2MDFlOTQ3ODFlfHJlYWQtd3JpdGU=",
+  "nxCloudAccessToken": "ODI5NjRmODAtMmJjNC00ZjdmLWExN2UtNGFmZGVjOTI5ZWFjfHJlYWQ=",
   "tasksRunnerOptions": {
     "default": {
+      "runner": "nx-cloud",
       "options": {
-        "cacheableOperations": ["build-storybook"]
+        "cacheableOperations": ["build-storybook"],
+        "accessToken": "NmJmZDA3MDItOWMxMy00OTk1LTlmMDItM2M3ZWJjNGQ5NzMxfHJlYWQtd3JpdGU="
       }
     }
   }

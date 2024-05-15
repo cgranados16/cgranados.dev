@@ -4,7 +4,7 @@ import TypeIt from 'typeit-react';
 const TypeWriter = () => {
   return (
     <TypeIt
-      element={'h2'}
+      as={'h2'}
       className="text-2xl lg:text-7xl font-bold"
       options={{ loop: true }}
       getBeforeInit={(instance) => {
@@ -38,9 +38,7 @@ export function Hero() {
           <br />
           Carlos Granados
         </h1>
-        <h2>
-          <TypeWriter />
-        </h2>
+        <TypeWriter />
       </div>
     </section>
   );
