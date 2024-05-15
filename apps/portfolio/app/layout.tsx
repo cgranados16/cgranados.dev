@@ -1,6 +1,7 @@
 import './global.css';
 import { Header, Footer } from '@cgranados.dev/ui';
 import { ThemeProvider } from '@cgranados.dev/portfolio/ui';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const metadata = {
   title: 'Carlos Granados',
