@@ -1,3 +1,11 @@
+## 0.2.0 (2024-05-14)
+
+### Feat
+
+- add vercel speed insights
+- component naming
+- removed portfolio-e2e
+
 ## 0.1.0 (2024-05-14)
 
 ### Feat
