@@ -3,7 +3,7 @@ import {
   PageHeader,
   PageHeaderDescription,
   PageHeaderHeading,
-} from '../components/PageHeader';
+} from '../components/page-header';
 
 const meta: Meta<typeof PageHeader> = {
   component: PageHeader,
