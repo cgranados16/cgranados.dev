@@ -1,9 +1,5 @@
-// Use this file to export React client components (e.g. those with 'use client' directive) or other non-server utilities
-
-import { Button, buttonVariants } from './components/ui/button';
-import { Header } from './components/header';
-import { Footer } from './components/footer';
-import { Icons } from './components/icons';
-export * from './components/page-header';
-export { Button, buttonVariants, Header, Footer, Icons };
-export * from './components/ui/card';
+export * from './components/header/header';
+export * from './components/button/button';
+export * from './components/icons/icons';
+export * from './components/dropdown-menu';
+export * from './components/footer';

@@ -4,15 +4,5 @@
   "sourceRoot": "libs/shared/ui/src",
   "projectType": "library",
   "tags": [],
-  "targets": {
-    "lint": {
-      "executor": "@nx/eslint:lint"
-    },
-    "version": {
-      "executor": "@jscutlery/semver:version",
-      "options": {
-        "preset": "conventionalcommits"
-      }
-    }
-  }
+  "targets": {}
 }
