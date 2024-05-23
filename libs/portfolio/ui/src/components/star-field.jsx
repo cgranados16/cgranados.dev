@@ -7,7 +7,7 @@ import { inSphere } from 'maath/random';
 function Stars(props) {
   const ref = useRef();
   const [sphere] = useState(() =>
-    inSphere(new Float32Array(5000), { radius: 1.5 }),
+    inSphere(new Float32Array(5000), { radius: 1.5 })
   );
   useFrame((state, delta) => {
     if (ref.current) {

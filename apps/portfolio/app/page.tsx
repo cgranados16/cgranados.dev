@@ -1,6 +1,5 @@
 import { Hero, StarsSection } from '@cgranados.dev/portfolio/ui';
-
-export default async function Index() {
+export default function Index() {
   /*
    * Replace the elements below with your own.
    *

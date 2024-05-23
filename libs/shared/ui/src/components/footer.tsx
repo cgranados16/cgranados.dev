@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { siteConfig } from '@cgranados.dev/shared/config';
+import { siteConfig } from '@config';
 
 export const Footer = () => {
   return (
