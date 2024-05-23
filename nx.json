@@ -6,22 +6,12 @@
       "dependsOn": ["^build"],
       "inputs": ["production", "^production"]
     },
-    "e2e": {
-      "cache": true,
-      "inputs": ["default", "^production"]
-    },
+    "e2e": { "cache": true, "inputs": ["default", "^production"] },
     "@nx/jest:jest": {
       "cache": true,
       "inputs": ["default", "^production", "{workspaceRoot}/jest.preset.js"],
-      "options": {
-        "passWithNoTests": true
-      },
-      "configurations": {
-        "ci": {
-          "ci": true,
-          "codeCoverage": true
-        }
-      }
+      "options": { "passWithNoTests": true },
+      "configurations": { "ci": { "ci": true, "codeCoverage": true } }
     },
     "build-storybook": {
       "cache": true,
@@ -61,21 +51,12 @@
   },
   "generators": {
     "@nx/react": {
-      "application": {
-        "babel": true
-      },
-      "library": {
-        "unitTestRunner": "none"
-      }
+      "application": { "babel": true },
+      "library": { "unitTestRunner": "none" }
     },
-    "@nx/next": {
-      "application": {
-        "style": "css",
-        "linter": "eslint"
-      }
-    }
+    "@nx/next": { "application": { "style": "css", "linter": "eslint" } }
   },
-  "nxCloudAccessToken": "ODI5NjRmODAtMmJjNC00ZjdmLWExN2UtNGFmZGVjOTI5ZWFjfHJlYWQ=",
+  "nxCloudAccessToken": "NjVjZDNjMjYtMjExYi00ZWIzLTk4NDctMWJiZmY4MmViZjZhfHJlYWQtd3JpdGU=",
   "tasksRunnerOptions": {
     "default": {
       "runner": "nx-cloud",
