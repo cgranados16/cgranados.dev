@@ -13,6 +13,7 @@ export const NavMobile = () => {
   const ref = useRef(null);
 
   useClickAway(ref, () => setOpen(false));
+  const blogUrl = process.env.NEXT_PUBLIC_APP_BLOG_URL || '';
   return (
     <div className="lg:hidden">
       <Sheet>
@@ -21,7 +22,7 @@ export const NavMobile = () => {
         </SheetTrigger>
         <SheetContent ref={ref}>
           <div className="flex flex-col mb-12">
-            <Link href={process.env.NEXT_PUBLIC_APP_BLOG_URL}>
+            <Link href={blogUrl}>
               <Button variant="ghost">Blog</Button>
             </Link>
             <hr />
