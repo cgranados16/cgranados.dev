@@ -23,4 +23,7 @@ export default defineConfig({
       include: ['react-use'],
     },
   },
+  redirects: {
+    '/': '/blog',
+  },
 });
