@@ -33,3 +33,14 @@ export const Icons = {
     </svg>
   ),
 };
+
+export function getIcon(name: string, className: string) {
+  switch (name) {
+    case 'GitHub':
+      return <Icons.GitHub className={className} />;
+    case 'Instagram':
+      return <Icons.Instagram className={className} />;
+    default:
+      return null;
+  }
+}

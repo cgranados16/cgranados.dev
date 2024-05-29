@@ -1,6 +1,6 @@
 import { siteConfig } from '@config';
 import { buttonVariants } from './button';
-import { Icons } from './icons';
+import { getIcon } from './icons';
 import { cn } from '../lib/utils';
 
 interface IconProps {
@@ -8,7 +8,6 @@ interface IconProps {
   link: string;
 }
 function renderIcon(props: IconProps) {
-  const IconComponent = Icons[props.label];
   return (
     <a
       href={props.link}
@@ -21,7 +20,7 @@ function renderIcon(props: IconProps) {
         'w-9 px-0'
       )}
     >
-      <IconComponent className="h-5 w-5" />
+      {getIcon(props.label, 'h-5 w-5')}
       <span className="sr-only">{props.label}</span>
     </a>
   );
