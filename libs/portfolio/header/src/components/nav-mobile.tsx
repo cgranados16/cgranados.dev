@@ -17,11 +17,11 @@ export const NavMobile = () => {
     <div className="lg:hidden">
       <Sheet>
         <SheetTrigger>
-          <Hamburger toggled={isOpen} size={20} toggle={setOpen} />
+          <Hamburger toggled={isOpen} size={25} toggle={setOpen} />
         </SheetTrigger>
         <SheetContent ref={ref}>
           <div className="flex flex-col mb-12">
-            <Link href={process.env.NEXT_PUBLIC_APP_BLOG_URL} framework="astro">
+            <Link href={process.env.NEXT_PUBLIC_APP_BLOG_URL}>
               <Button variant="ghost">Blog</Button>
             </Link>
             <hr />
@@ -32,10 +32,9 @@ export const NavMobile = () => {
               <p className="text-center text-sm leading-loose text-muted-foreground mr-2 [&:not(:first-child)]:mt-6">
                 Follow me on:
               </p>
-              <div>Caca</div>
-            </div>
-            <div className="flex flex-1 text-muted-foreground">
-              <SocialMediaIcons />
+              <div className="flex text-muted-foreground">
+                <SocialMediaIcons />
+              </div>
             </div>
           </SheetFooter>
         </SheetContent>

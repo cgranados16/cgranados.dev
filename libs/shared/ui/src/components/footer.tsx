@@ -1,9 +1,9 @@
 'use client';
 import Link from 'next/link';
 import { siteConfig } from '@config';
-import { Icons } from './icons/icons';
+import { Icons } from './icons';
 import { cn } from '../lib/utils';
-import { buttonVariants } from './button/button';
+import { buttonVariants } from './button';
 
 export const Footer = () => {
   return (

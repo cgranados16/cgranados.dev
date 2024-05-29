@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { TentTree } from 'lucide-react';
 import { metadata } from '../lib/metadata';
 import { buttonVariants } from '@shared/ui';
-import { cn } from '@ui/lib/utils';
+import { cn } from '@shared/ui';
 
 export const Logo = () => {
   return (

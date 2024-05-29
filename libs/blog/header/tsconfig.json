@@ -1,5 +1,4 @@
 {
-  "extends": "../../../tsconfig.base.json",
   "compilerOptions": {
     // Enable top-level await, and other modern ESM features.
     "target": "ESNext",
@@ -20,13 +19,22 @@
     // Report an error when importing a file using a casing different from another import of the same file.
     "forceConsistentCasingInFileNames": true,
     // Properly support importing CJS modules in ESM
-    "esModuleInterop": true,
+    "esModuleInterop": false,
     // Skip typechecking libraries and .d.ts files
     "skipLibCheck": true,
     // Allow JavaScript files to be imported
-    "allowJs": true,
+    "allowJs": false,
     // Enable strict mode. This enables a few options at a time, see https://www.typescriptlang.org/tsconfig#strict for a list.
-    "strict": true
+    "strict": true,
+    "jsx": "react-jsx",
+    "allowSyntheticDefaultImports": true
   },
-  "include": ["index.ts", "src"]
+  "files": [],
+  "include": [],
+  "references": [
+    {
+      "path": "./tsconfig.lib.json"
+    }
+  ],
+  "extends": "../../../tsconfig.base.json"
 }

@@ -22,8 +22,8 @@
       "@portfolio/header": ["libs/portfolio/header/src/index.ts"],
       "@shared/header": ["libs/shared/header/src/index.ts"],
       "@shared/ui": ["libs/shared/ui/src/index.ts"],
-      "@ui/*": ["libs/shared/ui/src/*"],
-      "@ui/tailwind.css": ["libs/shared/ui/src/tailwind.css"]
+      "@shared/ui/*": ["./libs/shared/ui/src/components/*"],
+      "@shared/ui/tailwind.css": ["libs/shared/ui/src/tailwind.css"]
     }
   },
   "exclude": ["node_modules", "tmp"]

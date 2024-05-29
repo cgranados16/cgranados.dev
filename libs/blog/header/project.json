@@ -1,7 +1,7 @@
 {
   "name": "blog-header",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/blog/header",
+  "sourceRoot": "libs/blog/header/src",
   "projectType": "library",
   "targets": {
     "check": {

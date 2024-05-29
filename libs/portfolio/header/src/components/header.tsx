@@ -12,7 +12,7 @@ export const Header = () => {
         </div>
         <div className="hidden lg:flex lg:gap-x-2">
           {metadata.links.map((link) => (
-            <a href={link.href}>
+            <a href={link.href} key={link.label}>
               <Button variant="ghost">{link.label}</Button>
             </a>
           ))}
