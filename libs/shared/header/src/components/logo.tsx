@@ -5,9 +5,10 @@ import { buttonVariants } from '@shared/ui';
 import { cn } from '@shared/ui';
 
 export const Logo = () => {
+  const portfolioUrl = process.env.NEXT_PUBLIC_APP_PORTFOLIO_URL || '';
   return (
     <Link
-      href={process.env.NEXT_PUBLIC_APP_PORTFOLIO_URL}
+      href={portfolioUrl}
       className={cn(
         buttonVariants({
           variant: 'link',
