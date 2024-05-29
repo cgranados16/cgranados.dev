@@ -1,11 +1,12 @@
 ---
 import '@ui/tailwind.css';
-import { Header, Footer } from '@ui';
-import { ModeToggle } from '../components/ModeToggle';
 import '@fontsource-variable/inter';
+import interWoff2 from '@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url';
+import { Header } from '@blog/header';
 import { cn } from '@ui/lib/utils';
 import { ViewTransitions } from 'astro:transitions';
-
+import { NavMobile } from '@ui/components/header/nav-mobile';
+import { Footer } from '@shared/ui';
 interface Props {
 	title: string;
 }
@@ -23,16 +24,12 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<ViewTransitions />
+		<link rel="preload" as="font" type="font/woff2" href={interWoff2} crossorigin/>
 	</head>
 
 	<body class="min-h-screen bg-background font-sans antialiased">
-		<Header>
-			<div slot="modeToggle">
-				<ModeToggle client:load/>
-			</div>
-		</Header>
-		<div class="flex-1 container"><slot /></div>
-		
+		<Header />
+		<!-- <div class="flex-1 container"><slot /></div> -->
 		<Footer/>
 	</body>
 </html>

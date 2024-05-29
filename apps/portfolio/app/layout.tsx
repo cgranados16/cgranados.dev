@@ -1,9 +1,9 @@
-import '@ui/tailwind.css';
-import { Header, Footer } from '@ui';
-import { ThemeProvider } from '@ui/components/theme-provider';
-import { ModeToggle } from '../src/components/mode-toggle';
-import { Inter as FontSans } from 'next/font/google';
 import { cn } from '@ui/lib/utils';
+import { Inter as FontSans } from 'next/font/google';
+import { ThemeProvider } from '@portfolio/ui';
+import { Header } from '@portfolio/header';
+import { Footer } from '@shared/ui';
+import '@ui/tailwind.css';
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -36,8 +36,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
             enableSystem
             disableTransitionOnChange
           >
-            <Header modeToggle={<ModeToggle />} />
-            <div className="flex-1">{children}</div>
+            <Header />
+            {/* <div className="flex-1">{children}</div> */}
             <Footer />
           </ThemeProvider>
         </body>

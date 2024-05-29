@@ -1,4 +1,4 @@
-import { Hero, StarsSection } from '@cgranados.dev/portfolio/ui';
+import { Hero, StarsSection } from '@portfolio/ui';
 export default function Index() {
   /*
    * Replace the elements below with your own.

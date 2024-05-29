@@ -15,9 +15,13 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@blog/header": ["libs/blog/header/index.ts"],
+      "@blog/ui": ["libs/blog/ui/index.ts"],
       "@config": ["libs/shared/config/src/index.ts"],
-      "@cgranados.dev/portfolio/ui": ["libs/portfolio/ui/src/index.ts"],
-      "@ui": ["libs/shared/ui/src/index.ts"],
+      "@portfolio/ui": ["libs/portfolio/ui/src/index.ts"],
+      "@portfolio/header": ["libs/portfolio/header/src/index.ts"],
+      "@shared/header": ["libs/shared/header/src/index.ts"],
+      "@shared/ui": ["libs/shared/ui/src/index.ts"],
       "@ui/*": ["libs/shared/ui/src/*"],
       "@ui/tailwind.css": ["libs/shared/ui/src/tailwind.css"]
     }

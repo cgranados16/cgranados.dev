@@ -13,6 +13,14 @@ export default defineConfig({
       ),
       applyBaseStyles: false,
     }),
-    react(),
+    react({ experimentalReactChildren: true }),
   ],
+  vite: {
+    ssr: {
+      noExternal: ['react-use'],
+    },
+    optimizeDeps: {
+      include: ['react-use'],
+    },
+  },
 });
