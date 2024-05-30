@@ -86,15 +86,6 @@
       }
     }
   },
-  "nxCloudAccessToken": "NjVjZDNjMjYtMjExYi00ZWIzLTk4NDctMWJiZmY4MmViZjZhfHJlYWQtd3JpdGU=",
-  "tasksRunnerOptions": {
-    "default": {
-      "runner": "nx/tasks-runners/default",
-      "options": {
-        "cacheDirectory": "/tmp/nx-cache",
-        "accessToken": "NmJmZDA3MDItOWMxMy00OTk1LTlmMDItM2M3ZWJjNGQ5NzMxfHJlYWQtd3JpdGU="
-      }
-    }
-  },
-  "useInferencePlugins": false
+  "useInferencePlugins": false,
+  "nxCloudAccessToken": "NjVjZDNjMjYtMjExYi00ZWIzLTk4NDctMWJiZmY4MmViZjZhfHJlYWQtd3JpdGU="
 }
