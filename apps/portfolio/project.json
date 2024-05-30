@@ -13,6 +13,14 @@
       "options": {
         "outputPath": "dist/apps/portfolio"
       }
+    },
+    "start": {
+      "executor": "nx:run-commands",
+      "dependsOn": ["build"],
+      "options": {
+        "cwd": "dist/apps/portfolio",
+        "command": "next start"
+      }
     }
   }
 }
