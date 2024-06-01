@@ -1,0 +1,27 @@
+---
+import Layout from './Layout.astro';
+import { Card, Hero } from '@blog/ui';
+import { getEntry } from 'astro:content';
+const blogPost = await getEntry('posts', 'my-first-post');
+
+import type { SEOProps } from "astro-seo";
+
+const { frontmatter } = Astro.props;
+
+const metadata: SEOProps = {
+    title: frontmatter.title,
+    description: frontmatter.description,
+}
+---
+
+<Layout metadata={metadata}>
+	<div class="flex-1 container lg:w-5/12 items-center mt-12">
+		<h1 class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl text-center mb-12">{frontmatter.title}</h1>
+		<div class="border-base-300 dark:border-base-600/60 border justify-center overflow-hidden rounded-md shrink-0 sm:justify-normal md:col-span-2 mb-12">
+			<figure>
+				<img alt={frontmatter.image.alt} class="w-full transition-all duration-500 group-hover:scale-[1.02] h-auto max-h-96 object-cover" decoding="async" height="700" loading="lazy" src={frontmatter.image.url} width="1249">
+			</figure>
+		</div>
+		<slot />
+	</div>
+</Layout>

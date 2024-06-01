@@ -1,4 +1,4 @@
-export { Button, buttonVariants } from './components/button';
+export * from './components/button';
 export * from './components/sheet/sheet';
 export * from './components/icons';
 export * from './components/dropdown-menu';

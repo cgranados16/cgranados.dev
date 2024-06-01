@@ -1,0 +1,35 @@
+---
+import { SEO, SEOProps } from "astro-seo";
+
+export interface Props extends SEOProps {
+}
+
+const {
+  title,
+  description
+} = Astro.props
+---
+<SEO
+title={title}
+description={description}
+charset="UTF-8"
+openGraph={{
+  basic: {
+    title: title,
+    type: "website",
+    image: "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+  }
+}}
+extend={{
+  // extending the default link tags
+  link: [{ rel: "icon", href: "/favicon.ico" }],
+  // extending the default meta tags
+  meta: [
+    {
+      name: "viewport",
+      content: "width=device-width, initial-scale=1.0",
+    },
+    { name: "generator", content: Astro.generator  },
+  ],
+}}
+/>
