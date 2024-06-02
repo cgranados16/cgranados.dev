@@ -1,7 +1,7 @@
 'use client';
 import * as React from 'react';
 import { Moon, Sun } from 'lucide-react';
-import { Button } from '@shared/ui';
+import { Button } from '@shared/ui/button';
 import {
   DropdownMenu,
   DropdownMenuContent,

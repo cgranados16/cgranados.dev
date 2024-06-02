@@ -1,18 +1,33 @@
 ---
 import { getCollection } from 'astro:content';
-import Layout from '../../layouts/MarkdownLayout.astro';
+import Layout from '../../layouts/PageLayout.astro';
+
+import type { SEOProps } from 'astro-seo';
+import SinglePost from '../../components/blog/SinglePost.astro';
 
 export async function getStaticPaths() {
-  const blogEntries = await getCollection('posts');
-  return blogEntries.map(entry => ({
-    params: { slug: entry.slug }, props: { entry },
+  const posts = await getCollection('posts');
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
   }));
 }
+interface Props {
+  post: CollectionEntry<'posts'>;
+}
 
-const { entry } = Astro.props;
-const { Content } = await entry.render();
+const { post } = Astro.props;
+
+const metadata: SEOProps = {
+  title: post.data.title,
+  description: post.data.title,
+};
+
+const { Content } = await post.render();
 ---
 
-<Layout frontmatter={entry.data}>
-  <Content/>
+<Layout metadata={metadata}>
+  <SinglePost post={post}>
+    <Content />
+  </SinglePost>
 </Layout>

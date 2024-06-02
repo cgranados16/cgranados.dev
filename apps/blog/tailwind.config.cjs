@@ -10,7 +10,7 @@ module.exports = {
   content: [
     join(
       __dirname,
-      'src/**/!(*.stories|*.spec).{astro,html,js,jsx,md,svelte,ts,tsx,vue}'
+      'src/**/!(*.stories|*.spec).{astro,html,js,jsx,md,svelte,ts,tsx,vue}',
     ),
     ...createGlobPatternsForDependencies(__dirname),
   ],
@@ -82,5 +82,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [require('tailwindcss-animate'), require('@tailwindcss/typography')],
 };

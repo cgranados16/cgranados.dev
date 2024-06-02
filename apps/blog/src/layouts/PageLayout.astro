@@ -1,0 +1,25 @@
+---
+import Layout from './Layout.astro';
+
+import { Header } from '@blog/header';
+import { Footer } from '@shared/ui';
+import type { SEOProps } from 'astro-seo';
+
+export interface Props {
+  metadata?: SEOProps;
+}
+
+const { metadata = {} } = Astro.props;
+---
+
+<Layout metadata={metadata}>
+  <slot name="header">
+    <Header />
+  </slot>
+  <main>
+    <slot />
+  </main>
+  <slot name="footer">
+    <Footer />
+  </slot>
+</Layout>

@@ -4,18 +4,19 @@ import { Card, Hero } from '@blog/ui';
 import { getEntry } from 'astro:content';
 const blogPost = await getEntry('posts', 'my-first-post');
 
-import type { SEOProps } from "astro-seo";
+import type { SEOProps } from 'astro-seo';
 
 const metadata: SEOProps = {
-    title: "The cgranados.dev Blog",
-    description: "Welcome to my blog! Here you'll find posts about web development, software engineering, and other topics that interest me.",
-} 
+  title: 'The cgranados.dev Blog',
+  description:
+    "Welcome to my blog! Here you'll find posts about web development, software engineering, and other topics that interest me.",
+};
 ---
 
 <Layout metadata={metadata}>
-    <div class="flex-1 container">
-        <Hero/>
-        <Card post={blogPost}/>
-        <div class="mb-12"></div>
-    </div>
+  <div class="flex-1 container">
+    <Hero />
+    <Card post={blogPost} />
+    <div class="mb-12"></div>
+  </div>
 </Layout>

@@ -1,19 +1,16 @@
 ---
 import '@shared/ui/tailwind.css';
 
-import { Header } from '@blog/header';
-import { Footer } from '@shared/ui';
-import BasicScripts from '../components/common/BasicScripts.astro';
-import CommonMeta from '../components/common/CommonMeta.astro';
-import CustomStyles from '../components/common/CustomStyles.astro';
-import Metadata from '../components/common/Metadata.astro';
-import Favicons from '../components/common/Favicons.astro';
 import { ViewTransitions } from 'astro:transitions';
+import BasicScripts from '../components/common/BasicScripts.astro';
+import CustomStyles from '../components/common/CustomStyles.astro';
+import Favicons from '../components/common/Favicons.astro';
+import Metadata from '../components/common/Metadata.astro';
 
-import type { SEOProps } from "astro-seo";
+import type { SEOProps } from 'astro-seo';
 
 export interface Props {
-	metadata?: SEOProps;
+  metadata?: SEOProps;
 }
 
 const { metadata = {} } = Astro.props;
@@ -21,19 +18,17 @@ const { metadata = {} } = Astro.props;
 
 <!doctype html>
 <html lang="en" class="dark">
-	<head>
-		<Metadata {...metadata}/>
-		<Favicons />
-		<CustomStyles />
+  <head>
+    <Metadata {...metadata} />
+    <Favicons />
+    <CustomStyles />
 
-		<ViewTransitions />
-	</head>
+    <ViewTransitions />
+  </head>
 
-	<body class="min-h-screen bg-background font-sans antialiased">
-		<Header />
-		<slot />
-		<Footer/>
+  <body class="min-h-screen bg-background font-sans antialiased">
+    <slot />
 
-		<BasicScripts />
-	</body>
+    <BasicScripts />
+  </body>
 </html>
