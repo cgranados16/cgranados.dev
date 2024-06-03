@@ -1,24 +1,28 @@
 ---
 import { Link } from '@blog/ui';
 import { Logo, metadata } from '@shared/header';
-import { Button, Icons, SocialMediaIcons } from '@shared/ui';
-import { siteConfig } from '@config';
-import { NavMobile } from './NavMobile';
+import { Button, SocialMediaIcons } from '@shared/ui';
 import { ModeToggle } from './ModeToggle';
+import { NavMobile } from './NavMobile';
 ---
-<header class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
-  <div class="container flex py-2 items-center justify-between">
+
+<header
+  class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60"
+>
+  <div class="container flex items-center justify-between py-2">
     <div class="flex lg:flex-1">
-      <Logo/>
+      <Logo />
     </div>
     <div class="hidden lg:flex lg:gap-x-2">
-      {metadata.links.map((link) => (
-        <Link href={link.href}>
-          <Button variant="ghost">{link.label}</Button>
-        </Link>
-      ))}
+      {
+        metadata.links.map((link) => (
+          <Link href={link.href}>
+            <Button variant="ghost">{link.label}</Button>
+          </Link>
+        ))
+      }
     </div>
-    <div class="lg:flex lg:flex-1 lg:justify-end hidden">
+    <div class="hidden lg:flex lg:flex-1 lg:justify-end">
       <SocialMediaIcons />
       <ModeToggle client:load />
     </div>

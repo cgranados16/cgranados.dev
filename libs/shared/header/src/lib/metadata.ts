@@ -4,7 +4,7 @@ export const metadata = {
   title: 'cgranados.dev',
   links: [
     {
-      href: process.env.NEXT_PUBLIC_APP_PORTFOLIO_URL,
+      href: process.env.PUBLIC_APP_PORTFOLIO_URL,
       label: 'Home',
     },
     {

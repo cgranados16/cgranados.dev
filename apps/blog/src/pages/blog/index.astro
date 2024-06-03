@@ -1,7 +1,7 @@
 ---
-import Layout from '../../layouts/Layout.astro';
 import { Card, Hero } from '@blog/ui';
 import { getEntry } from 'astro:content';
+import Layout from '../../layouts/PageLayout.astro';
 const blogPost = await getEntry('posts', 'my-first-post');
 
 import type { SEOProps } from 'astro-seo';
@@ -14,7 +14,7 @@ const metadata: SEOProps = {
 ---
 
 <Layout metadata={metadata}>
-  <div class="flex-1 container">
+  <div class="container flex-1">
     <Hero />
     <Card post={blogPost} />
     <div class="mb-12"></div>
