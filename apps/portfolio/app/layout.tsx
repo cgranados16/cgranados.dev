@@ -1,9 +1,8 @@
-import { cn } from '@shared/ui';
+import '@cgranados.dev/shared/ui/tailwind.css';
+import { Header, Footer } from '@cgranados.dev/shared/ui';
+import { ThemeProvider, ModeToggle } from '@cgranados.dev/portfolio/ui';
 import { Inter as FontSans } from 'next/font/google';
-import { ThemeProvider } from '@portfolio/ui';
-import { Header } from '@portfolio/header';
-import { Footer } from '@shared/ui';
-import '@shared/ui/tailwind.css';
+import { cn } from '@cgranados.dev/shared/ui';
 
 const fontSans = FontSans({
   subsets: ['latin'],

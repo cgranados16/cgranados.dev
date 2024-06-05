@@ -28,7 +28,8 @@
       "options": {
         "targetName": "lint"
       }
-    }
+    },
+    "@nxtensions/astro"
   ],
   "generators": {
     "@nx/next": {
