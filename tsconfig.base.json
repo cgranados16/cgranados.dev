@@ -17,6 +17,7 @@
     "paths": {
       "@cgranados.dev/portfolio/ui": ["libs/portfolio/ui/src/index.ts"],
       "@cgranados.dev/shared/ui": ["libs/shared/ui/src/index.ts"],
+      "@cgranados.dev/shared/ui/*": ["libs/shared/ui/src/*"],
       "@cgranados.dev/shared/ui/tailwind.css": [
         "libs/shared/ui/src/tailwind.css"
       ]
