@@ -15,8 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@config": ["libs/shared/config/src/index.ts"],
       "@cgranados.dev/portfolio/ui": ["libs/portfolio/ui/src/index.ts"],
+      "@config": ["libs/shared/config/src/index.ts"],
       "@ui": ["libs/shared/ui/src/index.ts"],
       "@ui/*": ["libs/shared/ui/src/*"],
       "@ui/tailwind.css": ["libs/shared/ui/src/tailwind.css"]
