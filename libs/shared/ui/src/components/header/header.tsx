@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { cn } from '../../lib/utils';
 import { buttonVariants } from '../button/button';
 import { Icons } from '../icons/icons';
-import { siteConfig } from '@config';
+import { siteConfig } from '../../lib/site';
 
 type HeaderProps = {
   modeToggle: React.ReactNode;
