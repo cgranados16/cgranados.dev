@@ -1,14 +1,14 @@
 import { useRef, useState } from 'react';
 import { useClickAway } from 'react-use';
 import { Squash as Hamburger } from 'hamburger-react';
-import { Button } from '@shared/ui/button';
+import { Button } from '@cgranados.dev/shared/ui';
 import {
   Sheet,
   SheetContent,
   SheetFooter,
   SheetTrigger,
-} from '@shared/ui/sheet/sheet';
-import { SocialMediaIcons } from '@shared/ui/social-media-icons';
+} from '@cgranados.dev/shared/ui';
+import { SocialMediaIcons } from '@cgranados.dev/shared/ui';
 
 const MenuFooter = () => (
   <SheetFooter>

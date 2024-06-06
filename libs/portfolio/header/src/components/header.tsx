@@ -1,5 +1,5 @@
-import { Logo, metadata } from '@shared/header';
-import { Button, SocialMediaIcons } from '@shared/ui';
+import { Logo, metadata } from '@cgranados.dev/shared/header';
+import { Button, SocialMediaIcons } from '@cgranados.dev/shared/ui';
 import { ModeToggle } from './mode-toggle';
 import { NavMobile } from './nav-mobile';
 

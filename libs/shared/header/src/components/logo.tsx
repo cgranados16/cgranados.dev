@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { TentTree } from 'lucide-react';
 import { metadata } from '../lib/metadata';
-import { buttonVariants } from '@shared/ui';
-import { cn } from '@shared/ui';
+import { buttonVariants } from '@cgranados.dev/shared/ui';
+import { cn } from '@cgranados.dev/shared/ui';
 
 export const Logo = () => {
   const portfolioUrl = process.env.NEXT_PUBLIC_APP_PORTFOLIO_URL || '';

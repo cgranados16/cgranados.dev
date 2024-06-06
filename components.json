@@ -11,7 +11,7 @@
     "prefix": ""
   },
   "aliases": {
-    "components": "@shared/ui",
-    "utils": "@shared/ui"
+    "components": "@cgranados.dev/shared/ui",
+    "utils": "@cgranados.dev/shared/ui"
   }
 }

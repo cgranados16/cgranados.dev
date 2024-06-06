@@ -1,4 +1,4 @@
-import { siteConfig } from '@config';
+import { siteConfig } from '@cgranados.dev/shared/ui/lib/site';
 
 export const metadata = {
   title: 'cgranados.dev',

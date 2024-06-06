@@ -10,11 +10,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-<<<<<<<< HEAD:libs/portfolio/header/src/components/mode-toggle.tsx
-} from '@shared/ui';
-========
 } from '@cgranados.dev/shared/ui';
->>>>>>>> develop:libs/portfolio/ui/src/components/mode-toggle.tsx
 
 export function ModeToggle() {
   const { setTheme } = useTheme();

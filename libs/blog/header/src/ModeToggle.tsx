@@ -1,13 +1,13 @@
 'use client';
 import * as React from 'react';
 import { Moon, Sun } from 'lucide-react';
-import { Button } from '@cgranados.dev/shared/ui/components/button/button';
+import { Button } from '@cgranados.dev/shared/ui';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@cgranados.dev/shared/ui/components/dropdown-menu';
+} from '@cgranados.dev/shared/ui';
 
 export function ModeToggle() {
   const [theme, setThemeState] = React.useState<

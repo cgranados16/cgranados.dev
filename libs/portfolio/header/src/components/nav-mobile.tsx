@@ -2,9 +2,9 @@
 import { useRef, useState } from 'react';
 import { useClickAway } from 'react-use';
 import { Squash as Hamburger } from 'hamburger-react';
-import { Button } from '@shared/ui';
-import { Sheet, SheetContent, SheetFooter, SheetTrigger } from '@shared/ui';
-import { SocialMediaIcons } from '@shared/ui';
+import { Button } from '@cgranados.dev/shared/ui';
+import { Sheet, SheetContent, SheetFooter, SheetTrigger } from '@cgranados.dev/shared/ui';
+import { SocialMediaIcons } from '@cgranados.dev/shared/ui';
 
 import Link from 'next/link';
 
