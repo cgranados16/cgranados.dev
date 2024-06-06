@@ -11,12 +11,12 @@ const { post } = Astro.props;
 <section class="mx-auto py-8 sm:py-16 lg:py-20">
   <article>
     <header
-      class="mx-auto mt-0 mb-2 flex max-w-3xl flex-col justify-between px-4 sm:flex-row sm:items-center sm:px-6"
+      class="mx-auto mb-2 mt-0 flex max-w-3xl flex-col justify-between px-4 sm:flex-row sm:items-center sm:px-6"
     >
       <h1
         class="leading-tighter font-heading mx-auto max-w-3xl px-4 text-4xl font-bold tracking-tighter sm:px-6 md:text-5xl"
       >
-        {post.data.title}
+        {post.title}
       </h1>
     </header>
     <div
@@ -24,12 +24,12 @@ const { post } = Astro.props;
     >
       <figure>
         <img
-          alt={post.data.image.alt}
+          alt={post.image.alt}
           class="h-auto max-h-96 w-full object-cover transition-all duration-500 group-hover:scale-[1.02]"
           decoding="async"
           height="700"
           loading="lazy"
-          src={post.data.image.url}
+          src={post.image.url}
           width="1249"
         />
       </figure>

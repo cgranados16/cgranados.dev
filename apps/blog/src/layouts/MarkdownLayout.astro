@@ -1,8 +1,5 @@
 ---
 import Layout from './Layout.astro';
-import { Card } from '@cgranados.dev/blog/ui';
-import { Hero } from '@cgranados.dev/blog/ui';
-import { getEntry } from 'astro:content';
 
 import type { SEOProps } from 'astro-seo';
 
@@ -15,28 +12,29 @@ const metadata: SEOProps = {
 ---
 
 <Layout metadata={metadata}>
-  section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-4xl">
-  <article>
-    <h1
-      class="font-heading leading-tighter text-4xl font-bold tracking-tighter md:text-5xl"
-    >
-      {frontmatter.title}
-    </h1>
-    <div
-      class="prose prose-lg dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg mx-auto mt-8 max-w-4xl"
-    >
-      <figure>
-        <img
-          alt={frontmatter.image.alt}
-          class="h-auto max-h-96 w-full object-cover transition-all duration-500 group-hover:scale-[1.02]"
-          decoding="async"
-          height="700"
-          loading="lazy"
-          src={frontmatter.image.url}
-          width="1249"
-        />
-      </figure>
-      <slot />
-    </div>
-  </article>
-</Layout> <
+  <section class="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+    <article>
+      <h1
+        class="font-heading leading-tighter text-4xl font-bold tracking-tighter md:text-5xl"
+      >
+        {frontmatter.title}
+      </h1>
+      <div
+        class="prose prose-lg dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg mx-auto mt-8 max-w-4xl"
+      >
+        <figure>
+          <img
+            alt={frontmatter.image.alt}
+            class="h-auto max-h-96 w-full object-cover transition-all duration-500 group-hover:scale-[1.02]"
+            decoding="async"
+            height="700"
+            loading="lazy"
+            src={frontmatter.image.url}
+            width="1249"
+          />
+        </figure>
+        <slot />
+      </div>
+    </article>
+  </section>
+</Layout>

@@ -1,12 +1,12 @@
 {
-  "name": "blog-header",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "name": "blog-header",
+  "tags": ["scope:blog"],
   "sourceRoot": "libs/blog/header/src",
   "projectType": "library",
   "targets": {
     "check": {
       "executor": "@nxtensions/astro:check"
     }
-  },
-  "tags": []
+  }
 }

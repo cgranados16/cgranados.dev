@@ -1,5 +1,6 @@
 {
-  "name": "ui",
+  "name": "blog-ui",
+  "tags": ["scope:blog", "type:ui"],
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/blog/ui",
   "projectType": "library",
@@ -7,6 +8,5 @@
     "check": {
       "executor": "@nxtensions/astro:check"
     }
-  },
-  "tags": []
+  }
 }
