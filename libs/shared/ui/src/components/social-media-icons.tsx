@@ -1,4 +1,4 @@
-import { siteConfig } from '@cgranados.dev/shared/ui/lib/site';
+import { siteConfig } from '../lib/site';
 import { buttonVariants } from './button';
 import { getIcon } from './icons';
 import { cn } from '../lib/utils';
