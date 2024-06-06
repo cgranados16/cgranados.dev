@@ -1,6 +1,5 @@
 ---
-import type { GetStaticPaths, InferGetStaticPropsType } from 'astro';
-import { getCollection } from 'astro:content';
+import { CollectionEntry, getCollection } from 'astro:content';
 import Layout from '../../layouts/PageLayout.astro';
 
 import type { SEOProps } from 'astro-seo';
@@ -11,21 +10,25 @@ export async function getStaticPaths() {
   return posts.map((post) => ({
     params: { slug: post.slug },
     props: { post },
-  })) satisfies GetStaticPaths;
+  }));
 }
-type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+
+interface Props {
+  post: CollectionEntry<'posts'>;
+}
 
 const { post } = Astro.props;
+
 const metadata: SEOProps = {
   title: post.data.title,
-  description: post.data.title,
+  description: post.data.description,
 };
 
 const { Content } = await post.render();
 ---
 
 <Layout metadata={metadata}>
-  <SinglePost post={post.data}>
+  <SinglePost post={post}>
     <Content />
   </SinglePost>
 </Layout>

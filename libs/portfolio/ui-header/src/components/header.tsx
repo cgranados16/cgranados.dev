@@ -1,11 +1,11 @@
-import { Logo, metadata } from '@cgranados.dev/shared/header';
 import { Button, SocialMediaIcons } from '@cgranados.dev/shared/ui';
+import { Logo, metadata } from '@cgranados.dev/shared/ui-header';
 import { ModeToggle } from './mode-toggle';
 import { NavMobile } from './nav-mobile';
 
 export const Header = () => {
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
+    <header className="bg-background/95 supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 w-full border-b backdrop-blur-xl">
       <div className="container flex items-center justify-between py-2">
         <div className="flex lg:flex-1">
           <Logo />

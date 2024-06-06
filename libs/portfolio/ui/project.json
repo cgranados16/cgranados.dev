@@ -3,7 +3,7 @@
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/portfolio/ui/src",
   "projectType": "library",
-  "tags": ["type:ui", "scope:portfolio"],
+  "tags": ["scope:portfolio", "type:ui"],
   "// targets": "to see all targets run: nx show project portfolio-ui --web",
   "targets": {}
 }

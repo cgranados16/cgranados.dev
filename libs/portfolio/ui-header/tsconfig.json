@@ -6,12 +6,14 @@
     "allowSyntheticDefaultImports": true,
     "strict": true
   },
-  "files": [],
-  "include": [],
-  "references": [
-    {
-      "path": "./tsconfig.lib.json"
-    }
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js",
+    "**/*.jsx",
+    "../../dist/apps/portfolio/.next/types/**/*.ts",
+    "next-env.d.ts",
+    ".next/types/**/*.ts"
   ],
   "extends": "../../../tsconfig.base.json"
 }

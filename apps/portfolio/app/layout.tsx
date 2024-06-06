@@ -1,9 +1,8 @@
-import '@cgranados.dev/shared/ui/tailwind.css';
-import { Footer } from '@cgranados.dev/shared/ui';
-import { Header } from '@cgranados.dev/portfolio/header';
 import { ThemeProvider } from '@cgranados.dev/portfolio/ui';
+import { Header } from '@cgranados.dev/portfolio/ui-header';
+import { Footer, cn } from '@cgranados.dev/shared/ui';
+import '@cgranados.dev/shared/ui/tailwind.css';
 import { Inter as FontSans } from 'next/font/google';
-import { cn } from '@cgranados.dev/shared/ui';
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -25,8 +24,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <head />
       <body
         className={cn(
-          'min-h-screen bg-background font-sans antialiased',
-          fontSans.variable
+          'bg-background min-h-screen font-sans antialiased',
+          fontSans.variable,
         )}
       >
         <ThemeProvider

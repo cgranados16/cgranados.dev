@@ -2,7 +2,7 @@
 import type { CollectionEntry } from 'astro:content';
 
 interface Props {
-  post: CollectionEntry<'post'>;
+  post: CollectionEntry<'posts'>;
 }
 
 const { post } = Astro.props;
@@ -16,7 +16,7 @@ const { post } = Astro.props;
       <h1
         class="leading-tighter font-heading mx-auto max-w-3xl px-4 text-4xl font-bold tracking-tighter sm:px-6 md:text-5xl"
       >
-        {post.title}
+        {post.data.title}
       </h1>
     </header>
     <div
@@ -24,12 +24,12 @@ const { post } = Astro.props;
     >
       <figure>
         <img
-          alt={post.image.alt}
+          alt={post.data.image?.alt}
           class="h-auto max-h-96 w-full object-cover transition-all duration-500 group-hover:scale-[1.02]"
           decoding="async"
           height="700"
           loading="lazy"
-          src={post.image.url}
+          src={post.data.image?.url}
           width="1249"
         />
       </figure>
