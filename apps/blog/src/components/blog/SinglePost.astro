@@ -1,6 +1,6 @@
 ---
+import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
-
 interface Props {
   post: CollectionEntry<'posts'>;
 }
@@ -23,13 +23,13 @@ const { post } = Astro.props;
       class="dark:prose-a:text-blue-400 dark:prose-headings:text-slate-300 dark:prose-invert lg:prose-xl prose prose-a:text-primary prose-headings:font-bold prose-headings:font-heading prose-headings:leading-tighter prose-headings:scroll-mt-[80px] prose-headings:tracking-tighter prose-img:rounded-md prose-img:shadow-lg prose-li:my-0 prose-md mx-auto mt-8 max-w-3xl px-6 sm:px-6"
     >
       <figure>
-        <img
+        <Image
+          src={post.data.image?.url}
           alt={post.data.image?.alt}
           class="h-auto max-h-96 w-full object-cover transition-all duration-500 group-hover:scale-[1.02]"
           decoding="async"
           height="700"
           loading="lazy"
-          src={post.data.image?.url}
           width="1249"
         />
       </figure>
