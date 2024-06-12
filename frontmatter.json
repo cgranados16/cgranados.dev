@@ -12,36 +12,38 @@
           "type": "string"
         },
         {
+          "title": "Slug",
+          "name": "slug",
+          "type": "string"
+        },
+        {
           "title": "Description",
           "name": "description",
           "type": "string"
         },
         {
           "title": "Publishing date",
-          "name": "date",
+          "name": "pubDate",
           "type": "datetime",
           "default": "{{now}}",
           "isPublishDate": true
         },
         {
-          "title": "Content preview",
-          "name": "preview",
-          "type": "image"
-        },
-        {
-          "title": "Is in draft",
-          "name": "draft",
-          "type": "draft"
-        },
-        {
-          "title": "Tags",
-          "name": "tags",
-          "type": "tags"
-        },
-        {
-          "title": "Categories",
-          "name": "categories",
-          "type": "categories"
+          "title": "Image",
+          "type": "fields",
+          "name": "image",
+          "fields": [
+            {
+              "title": "URL",
+              "name": "url",
+              "type": "image"
+            },
+            {
+              "title": "Alt text",
+              "name": "alt",
+              "type": "string"
+            }
+          ]
         }
       ]
     }
