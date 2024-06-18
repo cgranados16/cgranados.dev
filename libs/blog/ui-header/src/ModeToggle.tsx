@@ -1,7 +1,7 @@
+'use client';
 import * as React from 'react';
 import { Moon, Sun } from 'lucide-react';
-
-import { Button } from '@cgranados.dev/shared/ui/components/button/button';
+import { Button } from '@cgranados.dev/shared/ui/components/button';
 import {
   DropdownMenu,
   DropdownMenuContent,

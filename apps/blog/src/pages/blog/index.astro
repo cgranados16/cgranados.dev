@@ -1,0 +1,24 @@
+---
+import { FeaturedPost, Hero, MoreArticles } from '@cgranados.dev/blog/ui';
+import type { SEOProps } from 'astro-seo';
+import { getCollection, getEntry } from 'astro:content';
+import Layout from '../../layouts/PageLayout.astro';
+const featuredPost = await getEntry('posts', 'introduction');
+const allBlogPosts = await getCollection('posts', ({ id }) => {
+  return id !== featuredPost.id;
+});
+
+const metadata: SEOProps = {
+  title: 'The cgranados.dev Blog',
+  description:
+    "Welcome to my blog! Here you'll find posts about web development, software engineering, and other topics that interest me.",
+};
+---
+
+<Layout metadata={metadata}>
+  <div class="container mx-auto px-4 md:px-6 lg:px-8">
+    <Hero />
+    <FeaturedPost post={featuredPost} />
+    {allBlogPosts.length > 0 && <MoreArticles articles={allBlogPosts} />}
+  </div>
+</Layout>

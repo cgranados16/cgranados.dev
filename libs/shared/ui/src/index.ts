@@ -1,6 +1,8 @@
-export * from './components/header/header';
-export * from './components/button/button';
-export * from './components/icons/icons';
+export * from './components/button';
+export * from './components/sheet/sheet';
+export * from './components/icons';
 export * from './components/dropdown-menu';
 export * from './components/footer';
-export * from './lib/utils';
+export { SocialMediaIcons } from './components/social-media-icons';
+export { cn } from './lib/utils';
+export * from './lib/site';
