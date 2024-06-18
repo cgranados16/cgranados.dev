@@ -19,7 +19,7 @@ Outside of work, I love working out, have played guitar since I was 13, and am a
 
 I also have a dog, a Golden Retriever named Ace. He just turned 3 years old in May 2024. Whether he's accompanying me on hikes or just lounging by my side while I code, Ace is an integral part of my daily routine.
 
-![Ace](../../assets/posts/introduction/introduction-ace.jpg)
+![Ace](../../assets/posts/introduction/ace.jpg)
 
 ## Education
 
