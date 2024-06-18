@@ -18,6 +18,8 @@ const { post } = Astro.props;
         width={800}
         height={500}
         class="h-64 w-full rounded-lg object-cover md:h-auto"
+        loading="eager"
+        fetchpriority="high"
       />
     </div>
     <div class="space-y-4 md:space-y-6">

@@ -1,6 +1,3 @@
-import { useRef, useState } from 'react';
-import { useClickAway } from 'react-use';
-import { Squash as Hamburger } from 'hamburger-react';
 import { Button } from '@cgranados.dev/shared/ui/components/button';
 import {
   Sheet,
@@ -9,14 +6,17 @@ import {
   SheetTrigger,
 } from '@cgranados.dev/shared/ui/components/sheet/sheet';
 import { SocialMediaIcons } from '@cgranados.dev/shared/ui/components/social-media-icons';
+import { Squash as Hamburger } from 'hamburger-react';
+import { useRef, useState } from 'react';
+import { useClickAway } from 'react-use';
 
 const MenuFooter = () => (
   <SheetFooter>
     <div className="flex items-center justify-center">
-      <p className="mr-2 text-center text-sm leading-loose text-muted-foreground [&:not(:first-child)]:mt-6">
+      <p className="text-muted-foreground mr-2 text-center text-sm leading-loose [&:not(:first-child)]:mt-6">
         Follow me on:
       </p>
-      <div className="flex text-muted-foreground">
+      <div className="text-muted-foreground flex">
         <SocialMediaIcons />
       </div>
     </div>
@@ -32,7 +32,12 @@ export const NavMobile = () => {
     <div className="lg:hidden">
       <Sheet>
         <SheetTrigger>
-          <Hamburger toggled={isOpen} size={25} toggle={setOpen} />
+          <Hamburger
+            toggled={isOpen}
+            size={25}
+            toggle={setOpen}
+            label="Main Navigation Menu"
+          />
         </SheetTrigger>
         <SheetContent ref={ref}>
           <div className="mb-12 flex flex-col">

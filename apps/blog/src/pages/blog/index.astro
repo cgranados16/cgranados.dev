@@ -1,5 +1,5 @@
 ---
-import { Card, Hero, MoreArticles } from '@cgranados.dev/blog/ui';
+import { FeaturedPost, Hero, MoreArticles } from '@cgranados.dev/blog/ui';
 import type { SEOProps } from 'astro-seo';
 import { getCollection, getEntry } from 'astro:content';
 import Layout from '../../layouts/PageLayout.astro';
@@ -18,7 +18,7 @@ const metadata: SEOProps = {
 <Layout metadata={metadata}>
   <div class="container mx-auto px-4 md:px-6 lg:px-8">
     <Hero />
-    <Card post={featuredPost} />
+    <FeaturedPost post={featuredPost} />
     {allBlogPosts.length > 0 && <MoreArticles articles={allBlogPosts} />}
   </div>
 </Layout>

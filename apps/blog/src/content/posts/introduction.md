@@ -7,13 +7,15 @@ image:
   alt: Carlos Granados
 ---
 
-**Hello and welcome to my blog!** I am **Carlos Granados** and I am thrilled to have you here. I love to learn new skills and I like writing about it, that is why I decided to start this blog. I hope you find the content here useful and engaging. If you have any questions or suggestions, please feel free to reach out to me. I would love to hear from you!
+Hello and welcome to my blog! I'm **Carlos Granados** and I am thrilled to have you here. My passion for learning new skills and sharing my journey is what inspired me to start this blog. I hope you find the content here useful and engaging. If you have any questions or suggestions, please feel free to reach out to me. I would love to hear from you!
 
 ## Who am I?
 
+I am a passionate **Computer Engineer and Project Manager** from Costa Rica🇨🇷. I have always been curious about how things work and love to learn new skills. I am a firm believer in the power of education and continuous learning. I am always looking for ways to improve myself and help others along the way.
+
 When it comes to my formal education, I am a **Computer Engineer** with a Master's degree in **Project Manager**. If you ask about my work experience, then I have worked as a **Fullstack Engineer**, with a focus on **Search Engine Optimization (SEO)**.
 
-On the other side, I love working out, I have played guitar since I was 13 years old, and I am a huge fan of video games.
+I love working out, I have played guitar since I was 13 years old, and I am a huge fan of video games.
 
 I am based in Costa Rica 🇨🇷 and have a dog, a Golden Retriever named Ace. He just turned 3 years old in May 2024.
 ![Ace](../../assets/posts/introduction/introduction-ace.jpg)
@@ -22,6 +24,10 @@ I am based in Costa Rica 🇨🇷 and have a dog, a Golden Retriever named Ace. 
 
 I graduated from the **Costa Rica Institute of Technology** with a degree in Computer Engineering. I then pursued a Master's degree in Project Management at the **University of Barcelona**.
 Now I spend my time learning new skills using a variety of resources, including online courses, books, and tutorials. I am also a proactive person and I learn more by doing, so I am always working on new projects.
+
+### Project Management
+
+I graduated from the **University of Barcelona** with a Master's degree in Project Management. This degree has helped me develop my skills in planning, executing, and closing projects successfully. I have also learned how to manage teams effectively and communicate with stakeholders.
 
 ## Work Experience
 
