@@ -20,11 +20,11 @@ const nextConfig = {
       },
       {
         source: '/blog',
-        destination: `${NX_PUBLIC_BLOG_URL}/blog`,
+        destination: `${process.env.NX_PUBLIC_BLOG_URL}/blog`,
       },
       {
         source: '/post/:path*',
-        destination: `${NX_PUBLIC_BLOG_URL}/blog/:path*`,
+        destination: `${process.env.NX_PUBLIC_BLOG_URL}/blog/:path*`,
       },
     ];
   },
