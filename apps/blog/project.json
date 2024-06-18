@@ -1,6 +1,7 @@
 {
-  "name": "blog",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "blog",
+  "tags": ["scope:blog", "type:app"],
   "projectType": "application",
   "sourceRoot": "apps/blog/src",
   "targets": {
@@ -22,6 +23,5 @@
     "sync": {
       "executor": "@nxtensions/astro:sync"
     }
-  },
-  "tags": []
+  }
 }

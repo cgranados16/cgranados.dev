@@ -1,9 +1,8 @@
-import '@ui/tailwind.css';
-import { Header, Footer } from '@ui';
-import { ThemeProvider } from '@ui/components/theme-provider';
-import { ModeToggle } from '../src/components/mode-toggle';
+import { ThemeProvider } from '@cgranados.dev/portfolio/ui';
+import { Header } from '@cgranados.dev/portfolio/ui-header';
+import { Footer, cn } from '@cgranados.dev/shared/ui';
+import '@cgranados.dev/shared/ui/tailwind.css';
 import { Inter as FontSans } from 'next/font/google';
-import { cn } from '@ui/lib/utils';
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -21,27 +20,25 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <>
-      <html lang="en" suppressHydrationWarning>
-        <head />
-        <body
-          className={cn(
-            'min-h-screen bg-background font-sans antialiased',
-            fontSans.variable
-          )}
+    <html lang="en" suppressHydrationWarning>
+      <head />
+      <body
+        className={cn(
+          'bg-background min-h-screen font-sans antialiased',
+          fontSans.variable,
+        )}
+      >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
         >
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <Header modeToggle={<ModeToggle />} />
-            <div className="flex-1">{children}</div>
-            <Footer />
-          </ThemeProvider>
-        </body>
-      </html>
-    </>
+          <Header />
+          <div className="flex-1">{children}</div>
+          <Footer />
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }

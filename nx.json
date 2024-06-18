@@ -8,7 +8,6 @@
       "!{projectRoot}/eslint.config.js",
       "!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)",
       "!{projectRoot}/tsconfig.spec.json",
-      "!{projectRoot}/jest.config.[jt]s",
       "!{projectRoot}/src/test-setup.[jt]s",
       "!{projectRoot}/test-setup.[jt]s"
     ],
@@ -30,13 +29,7 @@
         "targetName": "lint"
       }
     },
-    "@nxtensions/astro",
-    {
-      "plugin": "@nx/jest/plugin",
-      "options": {
-        "targetName": "test"
-      }
-    }
+    "@nxtensions/astro"
   ],
   "generators": {
     "@nx/next": {
@@ -50,18 +43,6 @@
     }
   },
   "targetDefaults": {
-    "@nxtensions/astro:build": {
-      "inputs": ["production", "^production"],
-      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
-      "cache": true
-    },
-    "@nxtensions/astro:check": {
-      "inputs": ["production", "^production"],
-      "cache": true
-    },
-    "@nxtensions/astro:preview": {
-      "dependsOn": ["build"]
-    },
     "@nx/js:tsc": {
       "cache": true,
       "dependsOn": ["^build"],
@@ -71,17 +52,12 @@
       "cache": true,
       "dependsOn": ["^build"],
       "inputs": ["production", "^production"]
+    },
+    "@nx/vite:test": {
+      "cache": true,
+      "inputs": ["default", "^production"]
     }
   },
-  "nxCloudAccessToken": "NjVjZDNjMjYtMjExYi00ZWIzLTk4NDctMWJiZmY4MmViZjZhfHJlYWQtd3JpdGU=",
-  "tasksRunnerOptions": {
-    "default": {
-      "runner": "nx/tasks-runners/default",
-      "options": {
-        "cacheDirectory": "/tmp/nx-cache",
-        "accessToken": "NmJmZDA3MDItOWMxMy00OTk1LTlmMDItM2M3ZWJjNGQ5NzMxfHJlYWQtd3JpdGU="
-      }
-    }
-  },
-  "useInferencePlugins": false
+  "useInferencePlugins": false,
+  "nxCloudAccessToken": "NjVjZDNjMjYtMjExYi00ZWIzLTk4NDctMWJiZmY4MmViZjZhfHJlYWQtd3JpdGU="
 }
