@@ -4,11 +4,11 @@ export const metadata = {
   title: 'cgranados.dev',
   links: [
     {
-      href: process.env.NX_PUBLIC_PORTFOLIO_URL,
+      href: 'https://www.cgranados.dev/',
       label: 'Home',
     },
     {
-      href: process.env.NX_PUBLIC_BLOG_URL,
+      href: 'https://cgranados-blog.vercel.app/blog',
       label: 'Blog',
     },
   ],
