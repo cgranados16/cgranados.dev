@@ -12,7 +12,7 @@
     "@astrojs/tailwind": "^5.1.0",
     "@nx/eslint": "19.1.1",
     "@nx/eslint-plugin": "19.1.1",
-    "@nx/js": "19.1.1",
+    "@nx/js": "19.5.7",
     "@nx/next": "19.1.1",
     "@nx/react": "19.1.1",
     "@nx/vite": "19.1.1",
