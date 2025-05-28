@@ -1,0 +1,26 @@
+Daemon process terminated and closed the connection
+
+Messages from the log:
+[NX v21.1.2 Daemon Server] - 2025-05-28T01:51:15.294Z - Server stopped because: "Request to shutdown"
+[NX v21.1.2 Daemon Server] - 2025-05-28T01:51:15.835Z - Started listening on: /var/folders/60/bs4mjf5j5p15hvxxfh7pyrz40000gn/T/883b985c0cb5b3d492dd/d.sock
+[NX v21.1.2 Daemon Server] - 2025-05-28T01:51:15.837Z - [WATCHER]: Subscribed to changes within: /Users/cgranados/Documents/GitHub/Personal/cgranados.dev (native)
+[NX v21.1.2 Daemon Server] - 2025-05-28T01:51:15.846Z - Established a connection. Number of open connections: 1
+[NX v21.1.2 Daemon Server] - 2025-05-28T01:51:15.847Z - Closed a connection. Number of open connections: 0
+[NX v21.1.2 Daemon Server] - 2025-05-28T01:51:15.858Z - Established a connection. Number of open connections: 1
+[NX v21.1.2 Daemon Server] - 2025-05-28T01:51:15.858Z - Closed a connection. Number of open connections: 0
+[NX v21.1.2 Daemon Server] - 2025-05-28T01:51:15.858Z - Established a connection. Number of open connections: 1
+[NX v21.1.2 Daemon Server] - 2025-05-28T01:51:15.869Z - Closed a connection. Number of open connections: 0
+[NX v21.1.2 Daemon Server] - 2025-05-28T01:51:15.896Z - [WATCHER]: Processing file changes in outputs
+[NX v21.1.2 Daemon Server] - 2025-05-28T01:51:15.953Z - Established a connection. Number of open connections: 1
+[NX v21.1.2 Daemon Server] - 2025-05-28T01:51:15.954Z - Closed a connection. Number of open connections: 0
+[NX v21.1.2 Daemon Server] - 2025-05-28T01:51:15.992Z - Established a connection. Number of open connections: 1
+[NX v21.1.2 Daemon Server] - 2025-05-28T01:51:15.993Z - Established a connection. Number of open connections: 2
+[NX v21.1.2 Daemon Server] - 2025-05-28T01:51:15.994Z - Closed a connection. Number of open connections: 1
+[NX v21.1.2 Daemon Server] - 2025-05-28T01:51:15.995Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-28T01:51:16.105Z - Time taken for 'Load Nx Plugin: /Users/cgranados/Documents/GitHub/Personal/cgranados.dev/node_modules/.pnpm/nx@21.1.2_@swc-node+register@1.10.10_@swc+core@1.11.29/node_modules/nx/src/plugins/package-json' 163.87212500000004ms
+[NX v21.1.2 Daemon Server] - 2025-05-28T01:51:16.118Z - Time taken for 'Load Nx Plugin: /Users/cgranados/Documents/GitHub/Personal/cgranados.dev/node_modules/.pnpm/nx@21.1.2_@swc-node+register@1.10.10_@swc+core@1.11.29/node_modules/nx/src/plugins/project-json/build-nodes/project-json' 176.87475ms
+[NX v21.1.2 Daemon Server] - 2025-05-28T01:51:16.120Z - Closed a connection. Number of open connections: 0
+
+
+
+More information: /Users/cgranados/Documents/GitHub/Personal/cgranados.dev/.nx/workspace-data/d/daemon.log

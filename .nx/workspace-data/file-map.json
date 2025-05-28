@@ -49,265 +49,61 @@
     }
   ],
   "fileMap": {
-    "nonProjectFiles": [
-      {
-        "file": "package.json",
-        "hash": "13973570474053118125"
-      },
-      {
-        "file": ".github/dependabot.yml",
-        "hash": "8126742953872191246"
-      },
-      {
-        "file": "pnpm-lock.yaml",
-        "hash": "8762377678260179517"
-      },
-      {
-        "file": ".frontmatter/database/pinnedItemsDb.json",
-        "hash": "1389868326933519382"
-      },
-      {
-        "file": ".github/workflows/ci.yml",
-        "hash": "14065323005964723680"
-      },
-      {
-        "file": "CHANGELOG.md",
-        "hash": "9581233949853823228"
-      },
-      {
-        "file": ".frontmatter/database/mediaDb.json",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": ".lintstagedrc",
-        "hash": "7813178370239492984"
-      },
-      {
-        "file": "components.json",
-        "hash": "3977356341404887449"
-      },
-      {
-        "file": "vercel.json",
-        "hash": "2683465549276674127"
-      },
-      {
-        "file": ".frontmatter/database/taxonomyDb.json",
-        "hash": "9920577364791490483"
-      },
-      {
-        "file": ".vscode/settings.json",
-        "hash": "18044804623996134552"
-      },
-      {
-        "file": ".vscode/extensions.json",
-        "hash": "16884713733442577066"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "7399895510295535789"
-      },
-      {
-        "file": "frontmatter.json",
-        "hash": "9858448731138823415"
-      },
-      {
-        "file": ".cursor/mcp.json",
-        "hash": "17855668049505528177"
-      },
-      {
-        "file": "nx.json",
-        "hash": "3762531813749631781"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "1368780429781007814"
-      },
-      {
-        "file": ".editorconfig",
-        "hash": "5443105041930014821"
-      },
-      {
-        "file": ".prettierignore",
-        "hash": "16448050467312557263"
-      },
-      {
-        "file": ".npmrc",
-        "hash": "13371819923191802308"
-      },
-      {
-        "file": ".cz.toml",
-        "hash": "11204499306418044097"
-      },
-      {
-        "file": ".prettierrc",
-        "hash": "13898664834971644672"
-      },
-      {
-        "file": "eslint.config.mjs",
-        "hash": "6450408926391145222"
-      }
-    ],
     "projectFileMap": {
-      "portfolio-ui-header": [
+      ".vercel": [
         {
-          "file": "libs/portfolio/ui-header/eslint.config.mjs",
-          "hash": "7308491642577149719",
-          "deps": [
-            "npm:@eslint/eslintrc",
-            "npm:@eslint/js"
-          ]
+          "file": ".vercel/README.txt",
+          "hash": "14131471887446248118"
         },
         {
-          "file": "libs/portfolio/ui-header/project.json",
-          "hash": "11592070919110855373"
+          "file": ".vercel/project.json",
+          "hash": "9588454141683412424"
+        }
+      ],
+      "blog-ui-header": [
+        {
+          "file": "libs/blog/ui-header/index.ts",
+          "hash": "14000419088156086278"
         },
         {
-          "file": "libs/portfolio/ui-header/src/components/header.tsx",
-          "hash": "3218618361494594047",
+          "file": "libs/blog/ui-header/project.json",
+          "hash": "13263052955273654601"
+        },
+        {
+          "file": "libs/blog/ui-header/src/Header.astro",
+          "hash": "2536443509899524402",
           "deps": [
+            "blog-ui",
             "shared-ui",
             "shared-ui-header"
           ]
         },
         {
-          "file": "libs/portfolio/ui-header/src/components/mode-toggle.tsx",
-          "hash": "13895421230068587799",
+          "file": "libs/blog/ui-header/src/ModeToggle.tsx",
+          "hash": "1939346389412333891",
           "deps": [
             "npm:react",
             "npm:lucide-react",
-            "npm:next-themes",
             "shared-ui"
           ]
         },
         {
-          "file": "libs/portfolio/ui-header/src/components/nav-mobile.tsx",
-          "hash": "9253158924602506780",
+          "file": "libs/blog/ui-header/src/NavMobile.tsx",
+          "hash": "10536964178088388181",
           "deps": [
-            "npm:react",
-            "npm:react-use",
-            "npm:hamburger-react",
             "shared-ui",
-            "npm:next"
-          ]
-        },
-        {
-          "file": "libs/portfolio/ui-header/src/index.ts",
-          "hash": "11139762190826850818"
-        },
-        {
-          "file": "libs/portfolio/ui-header/tsconfig.json",
-          "hash": "2634977634315984303"
-        },
-        {
-          "file": "libs/portfolio/ui-header/tsconfig.lib.json",
-          "hash": "5871313897011035901"
-        }
-      ],
-      "shared-ui": [
-        {
-          "file": "libs/shared/ui/eslint.config.mjs",
-          "hash": "8422848872100490934",
-          "deps": [
-            "npm:@eslint/eslintrc",
-            "npm:@eslint/js",
-            [
-              "npm:jsonc-eslint-parser",
-              "dynamic"
-            ]
-          ]
-        },
-        {
-          "file": "libs/shared/ui/package.json",
-          "hash": "17843455068703294298",
-          "deps": [
-            "npm:tslib"
-          ]
-        },
-        {
-          "file": "libs/shared/ui/project.json",
-          "hash": "14699897840049540641"
-        },
-        {
-          "file": "libs/shared/ui/src/components/button.tsx",
-          "hash": "3152480292087206621",
-          "deps": [
-            "npm:react",
-            "npm:@radix-ui/react-slot",
-            "npm:class-variance-authority"
-          ]
-        },
-        {
-          "file": "libs/shared/ui/src/components/dropdown-menu.tsx",
-          "hash": "6600480695114806880",
-          "deps": [
-            "npm:react",
-            "npm:@radix-ui/react-dropdown-menu",
-            "npm:lucide-react"
-          ]
-        },
-        {
-          "file": "libs/shared/ui/src/components/footer.tsx",
-          "hash": "1604810342061071280",
-          "deps": [
-            "npm:next"
-          ]
-        },
-        {
-          "file": "libs/shared/ui/src/components/icons.tsx",
-          "hash": "13990316454065059925",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "libs/shared/ui/src/components/mobile-menu/mobile-menu.tsx",
-          "hash": "3997738118365116160",
-          "deps": [
-            "npm:react",
             "npm:hamburger-react",
-            "npm:next"
-          ]
-        },
-        {
-          "file": "libs/shared/ui/src/components/sheet/sheet.tsx",
-          "hash": "1645777873905068844",
-          "deps": [
             "npm:react",
-            "npm:@radix-ui/react-dialog",
-            "npm:class-variance-authority"
+            "npm:react-use"
           ]
         },
         {
-          "file": "libs/shared/ui/src/components/social-media-icons.tsx",
-          "hash": "5939074323986460185"
+          "file": "libs/blog/ui-header/src/env.d.ts",
+          "hash": "12247281929465002553"
         },
         {
-          "file": "libs/shared/ui/src/index.ts",
-          "hash": "4852112866018016267"
-        },
-        {
-          "file": "libs/shared/ui/src/lib/site.ts",
-          "hash": "13516445353378030015"
-        },
-        {
-          "file": "libs/shared/ui/src/lib/utils.ts",
-          "hash": "15456290709904554663",
-          "deps": [
-            "npm:clsx",
-            "npm:tailwind-merge"
-          ]
-        },
-        {
-          "file": "libs/shared/ui/src/tailwind.css",
-          "hash": "8331140109577324479"
-        },
-        {
-          "file": "libs/shared/ui/tsconfig.json",
-          "hash": "2164434162161354255"
-        },
-        {
-          "file": "libs/shared/ui/tsconfig.lib.json",
-          "hash": "8974359024759088354"
+          "file": "libs/blog/ui-header/tsconfig.json",
+          "hash": "16311479575695950720"
         }
       ],
       "portfolio": [
@@ -379,47 +175,6 @@
         {
           "file": "apps/portfolio/tsconfig.json",
           "hash": "4279213480592064625"
-        }
-      ],
-      "blog-ui": [
-        {
-          "file": "libs/blog/ui/index.ts",
-          "hash": "5818815160370518295"
-        },
-        {
-          "file": "libs/blog/ui/project.json",
-          "hash": "8247104586232734510"
-        },
-        {
-          "file": "libs/blog/ui/src/Link.astro",
-          "hash": "17377328443196381613"
-        },
-        {
-          "file": "libs/blog/ui/src/env.d.ts",
-          "hash": "12247281929465002553"
-        },
-        {
-          "file": "libs/blog/ui/src/homepage/FeaturedPost.astro",
-          "hash": "15153296254469282986",
-          "deps": [
-            "npm:astro:assets",
-            "npm:astro:content"
-          ]
-        },
-        {
-          "file": "libs/blog/ui/src/homepage/Hero.astro",
-          "hash": "6341292861545372135"
-        },
-        {
-          "file": "libs/blog/ui/src/homepage/MoreArticles.astro",
-          "hash": "4975305534411863277",
-          "deps": [
-            "npm:astro:assets"
-          ]
-        },
-        {
-          "file": "libs/blog/ui/tsconfig.json",
-          "hash": "9425807577760048760"
         }
       ],
       "blog": [
@@ -565,16 +320,6 @@
           "hash": "11932686394242631300"
         }
       ],
-      ".vercel": [
-        {
-          "file": ".vercel/README.txt",
-          "hash": "14131471887446248118"
-        },
-        {
-          "file": ".vercel/project.json",
-          "hash": "9588454141683412424"
-        }
-      ],
       "shared-ui-header": [
         {
           "file": "libs/shared/ui-header/eslint.config.mjs",
@@ -630,6 +375,61 @@
         {
           "file": "libs/shared/ui-header/tsconfig.spec.json",
           "hash": "1954948368115445538"
+        }
+      ],
+      "portfolio-ui-header": [
+        {
+          "file": "libs/portfolio/ui-header/eslint.config.mjs",
+          "hash": "7308491642577149719",
+          "deps": [
+            "npm:@eslint/eslintrc",
+            "npm:@eslint/js"
+          ]
+        },
+        {
+          "file": "libs/portfolio/ui-header/project.json",
+          "hash": "11592070919110855373"
+        },
+        {
+          "file": "libs/portfolio/ui-header/src/components/header.tsx",
+          "hash": "3218618361494594047",
+          "deps": [
+            "shared-ui",
+            "shared-ui-header"
+          ]
+        },
+        {
+          "file": "libs/portfolio/ui-header/src/components/mode-toggle.tsx",
+          "hash": "13895421230068587799",
+          "deps": [
+            "npm:react",
+            "npm:lucide-react",
+            "npm:next-themes",
+            "shared-ui"
+          ]
+        },
+        {
+          "file": "libs/portfolio/ui-header/src/components/nav-mobile.tsx",
+          "hash": "9253158924602506780",
+          "deps": [
+            "npm:react",
+            "npm:react-use",
+            "npm:hamburger-react",
+            "shared-ui",
+            "npm:next"
+          ]
+        },
+        {
+          "file": "libs/portfolio/ui-header/src/index.ts",
+          "hash": "11139762190826850818"
+        },
+        {
+          "file": "libs/portfolio/ui-header/tsconfig.json",
+          "hash": "2634977634315984303"
+        },
+        {
+          "file": "libs/portfolio/ui-header/tsconfig.lib.json",
+          "hash": "5871313897011035901"
         }
       ],
       "portfolio-ui": [
@@ -703,52 +503,252 @@
           "hash": "11291807784778146605"
         }
       ],
-      "blog-ui-header": [
+      "blog-ui": [
         {
-          "file": "libs/blog/ui-header/index.ts",
-          "hash": "14000419088156086278"
+          "file": "libs/blog/ui/index.ts",
+          "hash": "5818815160370518295"
         },
         {
-          "file": "libs/blog/ui-header/project.json",
-          "hash": "13263052955273654601"
+          "file": "libs/blog/ui/project.json",
+          "hash": "8247104586232734510"
         },
         {
-          "file": "libs/blog/ui-header/src/Header.astro",
-          "hash": "2536443509899524402",
-          "deps": [
-            "blog-ui",
-            "shared-ui",
-            "shared-ui-header"
-          ]
+          "file": "libs/blog/ui/src/Link.astro",
+          "hash": "17377328443196381613"
         },
         {
-          "file": "libs/blog/ui-header/src/ModeToggle.tsx",
-          "hash": "1939346389412333891",
-          "deps": [
-            "npm:react",
-            "npm:lucide-react",
-            "shared-ui"
-          ]
-        },
-        {
-          "file": "libs/blog/ui-header/src/NavMobile.tsx",
-          "hash": "10536964178088388181",
-          "deps": [
-            "shared-ui",
-            "npm:hamburger-react",
-            "npm:react",
-            "npm:react-use"
-          ]
-        },
-        {
-          "file": "libs/blog/ui-header/src/env.d.ts",
+          "file": "libs/blog/ui/src/env.d.ts",
           "hash": "12247281929465002553"
         },
         {
-          "file": "libs/blog/ui-header/tsconfig.json",
-          "hash": "16311479575695950720"
+          "file": "libs/blog/ui/src/homepage/FeaturedPost.astro",
+          "hash": "15153296254469282986",
+          "deps": [
+            "npm:astro:assets",
+            "npm:astro:content"
+          ]
+        },
+        {
+          "file": "libs/blog/ui/src/homepage/Hero.astro",
+          "hash": "6341292861545372135"
+        },
+        {
+          "file": "libs/blog/ui/src/homepage/MoreArticles.astro",
+          "hash": "4975305534411863277",
+          "deps": [
+            "npm:astro:assets"
+          ]
+        },
+        {
+          "file": "libs/blog/ui/tsconfig.json",
+          "hash": "9425807577760048760"
+        }
+      ],
+      "shared-ui": [
+        {
+          "file": "libs/shared/ui/eslint.config.mjs",
+          "hash": "8422848872100490934",
+          "deps": [
+            "npm:@eslint/eslintrc",
+            "npm:@eslint/js",
+            [
+              "npm:jsonc-eslint-parser",
+              "dynamic"
+            ]
+          ]
+        },
+        {
+          "file": "libs/shared/ui/package.json",
+          "hash": "17843455068703294298",
+          "deps": [
+            "npm:tslib"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/project.json",
+          "hash": "14699897840049540641"
+        },
+        {
+          "file": "libs/shared/ui/src/components/button.tsx",
+          "hash": "3152480292087206621",
+          "deps": [
+            "npm:react",
+            "npm:@radix-ui/react-slot",
+            "npm:class-variance-authority"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/src/components/dropdown-menu.tsx",
+          "hash": "6600480695114806880",
+          "deps": [
+            "npm:react",
+            "npm:@radix-ui/react-dropdown-menu",
+            "npm:lucide-react"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/src/components/footer.tsx",
+          "hash": "1604810342061071280",
+          "deps": [
+            "npm:next"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/src/components/icons.tsx",
+          "hash": "13990316454065059925",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/src/components/mobile-menu/mobile-menu.tsx",
+          "hash": "3997738118365116160",
+          "deps": [
+            "npm:react",
+            "npm:hamburger-react",
+            "npm:next"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/src/components/sheet/sheet.tsx",
+          "hash": "1645777873905068844",
+          "deps": [
+            "npm:react",
+            "npm:@radix-ui/react-dialog",
+            "npm:class-variance-authority"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/src/components/social-media-icons.tsx",
+          "hash": "5939074323986460185"
+        },
+        {
+          "file": "libs/shared/ui/src/index.ts",
+          "hash": "4852112866018016267"
+        },
+        {
+          "file": "libs/shared/ui/src/lib/site.ts",
+          "hash": "13516445353378030015"
+        },
+        {
+          "file": "libs/shared/ui/src/lib/utils.ts",
+          "hash": "15456290709904554663",
+          "deps": [
+            "npm:clsx",
+            "npm:tailwind-merge"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/src/tailwind.css",
+          "hash": "8331140109577324479"
+        },
+        {
+          "file": "libs/shared/ui/tsconfig.json",
+          "hash": "2164434162161354255"
+        },
+        {
+          "file": "libs/shared/ui/tsconfig.lib.json",
+          "hash": "8974359024759088354"
         }
       ]
-    }
+    },
+    "nonProjectFiles": [
+      {
+        "file": ".cursor/mcp.json",
+        "hash": "17855668049505528177"
+      },
+      {
+        "file": ".cz.toml",
+        "hash": "11204499306418044097"
+      },
+      {
+        "file": ".editorconfig",
+        "hash": "5443105041930014821"
+      },
+      {
+        "file": ".frontmatter/database/mediaDb.json",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": ".frontmatter/database/pinnedItemsDb.json",
+        "hash": "1389868326933519382"
+      },
+      {
+        "file": ".frontmatter/database/taxonomyDb.json",
+        "hash": "9920577364791490483"
+      },
+      {
+        "file": ".github/dependabot.yml",
+        "hash": "8126742953872191246"
+      },
+      {
+        "file": ".github/workflows/ci.yml",
+        "hash": "14065323005964723680"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "1368780429781007814"
+      },
+      {
+        "file": ".lintstagedrc",
+        "hash": "7813178370239492984"
+      },
+      {
+        "file": ".npmrc",
+        "hash": "13371819923191802308"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "16448050467312557263"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "13898664834971644672"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "16884713733442577066"
+      },
+      {
+        "file": ".vscode/settings.json",
+        "hash": "18044804623996134552"
+      },
+      {
+        "file": "CHANGELOG.md",
+        "hash": "9581233949853823228"
+      },
+      {
+        "file": "components.json",
+        "hash": "3977356341404887449"
+      },
+      {
+        "file": "eslint.config.mjs",
+        "hash": "6450408926391145222"
+      },
+      {
+        "file": "frontmatter.json",
+        "hash": "9858448731138823415"
+      },
+      {
+        "file": "nx.json",
+        "hash": "3762531813749631781"
+      },
+      {
+        "file": "package.json",
+        "hash": "12708794115163961524"
+      },
+      {
+        "file": "pnpm-lock.yaml",
+        "hash": "1805853900372996388"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "7399895510295535789"
+      },
+      {
+        "file": "vercel.json",
+        "hash": "2683465549276674127"
+      }
+    ]
   }
 }

@@ -1,5 +1,5 @@
 import react from '@astrojs/react';
-import tailwind from '@astrojs/tailwind';
+import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'astro/config';
 import rehypeExternalLinks from 'rehype-external-links';
 
@@ -7,12 +7,10 @@ import rehypeExternalLinks from 'rehype-external-links';
 export default defineConfig({
   outDir: '../../dist/apps/blog',
   integrations: [
-    tailwind({
-      applyBaseStyles: false,
-    }),
     react({ experimentalReactChildren: true }),
   ],
   vite: {
+    plugins: [tailwindcss()],
     ssr: {
       noExternal: ['react-use'],
     },
