@@ -6,22 +6,39 @@
   "sourceRoot": "apps/blog/src",
   "targets": {
     "build": {
-      "executor": "@nxtensions/astro:build",
-      "options": {}
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "apps/blog",
+        "command": "astro build"
+      }
     },
     "dev": {
-      "executor": "@nxtensions/astro:dev",
-      "options": {}
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "apps/blog",
+        "command": "astro dev"
+      }
     },
     "preview": {
-      "executor": "@nxtensions/astro:preview",
-      "options": {}
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "apps/blog",
+        "command": "astro preview"
+      }
     },
     "check": {
-      "executor": "@nxtensions/astro:check"
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "apps/blog",
+        "command": "astro check"
+      }
     },
     "sync": {
-      "executor": "@nxtensions/astro:sync"
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "apps/blog",
+        "command": "astro sync"
+      }
     }
   }
 }

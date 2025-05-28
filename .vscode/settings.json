@@ -1,3 +1,6 @@
 {
-  "conventionalCommits.scopes": ["blog"]
+  "conventionalCommits.scopes": [
+    "blog"
+  ],
+  "nxConsole.generateAiAgentRules": true
 }
