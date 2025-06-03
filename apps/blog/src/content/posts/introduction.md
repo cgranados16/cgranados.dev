@@ -1,6 +1,7 @@
 ---
 title: My Introduction
 pubDate: 2024-06-12T04:32:52.843Z
+created: 2024-06-12T04:32:52.843Z
 description: Get to know Carlos Granados, a passionate Computer Engineer and Project Manager from Costa Rica.
 image:
   url: ../../assets/posts/introduction/introduction-1.jpg
