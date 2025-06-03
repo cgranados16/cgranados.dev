@@ -49,3 +49,4 @@ Thumbs.db
 .env.local
 .env.development
 .cursor/rules/nx-rules.mdc
+.vercel

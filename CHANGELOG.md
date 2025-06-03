@@ -1,3 +1,14 @@
+## 0.2.1 (2024-06-18)
+
+### Fix
+
+- header navigation
+
+### Refactor
+
+- remove ace post
+- remove wrong changes
+
 ## 0.2.0 (2024-06-18)
 
 ### Feat
