@@ -45,17 +45,7 @@ export function FeaturesSection() {
         xValues={['0%', '-76%']}
       >
         <motion.div
-          className="h-screen bg-slate-900 my-48"
-          initial={{ opacity: 0, y: '100' }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-            transition: { delay: 0.2, duration: 0.5 },
-          }}
-          viewport={{ once: true, amount: 0.3 }}
-        ></motion.div>
-        <motion.div
-          className="h-screen bg-red-900 my-48"
+          className="h-screen my-48"
           initial={{ opacity: 0, y: '100' }}
           whileInView={{
             opacity: 1,
@@ -73,7 +63,7 @@ export function FeaturesSection() {
         xValues={['0%', '-120%']}
       >
         <motion.div
-          className="h-screen bg-blue-900 rounded-xl"
+          className="h-screen  rounded-xl"
           initial={{ opacity: 0, y: '100' }}
           whileInView={{
             opacity: 1,

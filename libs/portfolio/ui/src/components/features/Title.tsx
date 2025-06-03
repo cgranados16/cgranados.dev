@@ -1,5 +1,5 @@
 import { forwardRef, Ref } from 'react';
-import { cn } from '../../../../../shared/ui/src/utils';
+import { cn } from '@cgranados.dev/shared/ui';
 
 type TitleProps = {
   children: React.ReactNode;
@@ -28,8 +28,22 @@ type TitleHighlightProps = {
 };
 
 const TitleHighlight = ({ text, color }: TitleHighlightProps) => {
-  let textColor = color ? `text-${color}-600` : null;
-  return <span className={cn(textColor)}>{text}</span>;
+  // Define color mapping to ensure proper Tailwind classes
+  const colorMap: Record<string, string> = {
+    blue: 'text-blue-600',
+    emerald: 'text-emerald-600',
+    purple: 'text-purple-600',
+    green: 'text-green-600',
+    red: 'text-red-600',
+    yellow: 'text-yellow-600',
+    pink: 'text-pink-600',
+    indigo: 'text-indigo-600',
+    cyan: 'text-cyan-600',
+    orange: 'text-orange-600',
+  };
+  
+  const textColor = color && colorMap[color] ? colorMap[color] : 'text-primary';
+  return <span className={cn(textColor, 'font-bold')}>{text}</span>;
 };
 
 export { Title, TitleHighlight };

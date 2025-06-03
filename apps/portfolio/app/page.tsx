@@ -15,7 +15,6 @@ export default async function Index() {
       <Hero />
       <StarsSection />
       <FeaturesSection />
-      <div className="mt-36 h-screen bg-red-950"></div>
     </div>
   );
 }
