@@ -1,0 +1,49 @@
+---
+const { articles } = Astro.props;
+import { Image } from 'astro:assets';
+
+// Helper function to format dates
+const formatDate = (date: Date) => {
+  return new Intl.DateTimeFormat('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  }).format(date);
+};
+---
+
+<section class="py-8 md:py-12 lg:py-16">
+  <div class="mx-auto px-4 md:px-6 lg:px-8">
+    <h2
+      class="mb-6 text-2xl text-4xl font-bold tracking-tight md:mb-8 lg:mb-10"
+    >
+      More Articles
+    </h2>
+    <div
+      class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8 lg:gap-10"
+    >
+      {
+        articles.map((post) => (
+          <a 
+            href={`/posts/${post.slug}`}
+            class="group block overflow-hidden rounded-lg bg-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl dark:bg-gray-900"
+          >
+            <Image
+              src={post.data.image.url}
+              alt={post.data.image.alt}
+              width={500}
+              height={300}
+              class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-110"
+            />
+            <div class="p-4 md:p-6">
+              <h3 class="mb-2 text-xl font-bold group-hover:text-primary transition-colors duration-300">{post.data.title}</h3>
+              <p class="mb-4 text-gray-500 dark:text-gray-400">
+                {post.data.description}
+              </p>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</section>

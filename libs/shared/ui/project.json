@@ -3,16 +3,6 @@
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/shared/ui/src",
   "projectType": "library",
-  "tags": [],
-  "targets": {
-    "lint": {
-      "executor": "@nx/eslint:lint"
-    },
-    "version": {
-      "executor": "@jscutlery/semver:version",
-      "options": {
-        "preset": "conventionalcommits"
-      }
-    }
-  }
+  "tags": ["type:ui", "scope:shared"],
+  "targets": {}
 }

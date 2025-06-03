@@ -1,0 +1,34 @@
+---
+import '@cgranados.dev/shared/ui/tailwind.css';
+
+import { ViewTransitions } from 'astro:transitions';
+import BasicScripts from '../components/common/BasicScripts.astro';
+import CustomStyles from '../components/common/CustomStyles.astro';
+import Favicons from '../components/common/Favicons.astro';
+import Metadata from '../components/common/Metadata.astro';
+
+import type { SEOProps } from 'astro-seo';
+
+export interface Props {
+  metadata?: SEOProps;
+}
+
+const { metadata = {} } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <Metadata {...metadata} />
+    <Favicons />
+    <CustomStyles />
+
+    <ViewTransitions />
+  </head>
+
+  <body class="bg-background min-h-screen font-sans antialiased">
+    <slot />
+
+    <BasicScripts />
+  </body>
+</html>

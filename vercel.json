@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    {
+      "source": "/:path*",
+      "destination": "/:path*"
+    },
+    {
+      "source": "/blog",
+      "destination": "${process.env.NX_PUBLIC_BLOG_URL}/blog"
+    },
+    {
+      "source": "/post/:path*",
+      "destination": "${process.env.NX_PUBLIC_BLOG_URL}/blog"
+    }
+  ]
+}

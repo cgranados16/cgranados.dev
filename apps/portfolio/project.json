@@ -4,60 +4,22 @@
   "sourceRoot": "apps/portfolio",
   "projectType": "application",
   "tags": [],
+  "// targets": "to see all targets run: nx show project portfolio --web",
   "targets": {
     "build": {
       "executor": "@nx/next:build",
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/apps/portfolio",
-        "postcssConfig": "apps/portfolio/postcss.config.js"
-      },
-      "configurations": {
-        "development": {
-          "outputPath": "apps/portfolio"
-        },
-        "production": {}
+        "outputPath": "dist/apps/portfolio"
       }
     },
-    "serve": {
-      "executor": "@nx/next:server",
-      "defaultConfiguration": "development",
+    "start": {
+      "executor": "nx:run-commands",
+      "dependsOn": ["build"],
       "options": {
-        "buildTarget": "portfolio:build",
-        "dev": true
-      },
-      "configurations": {
-        "development": {
-          "buildTarget": "portfolio:build:development",
-          "dev": true
-        },
-        "production": {
-          "buildTarget": "portfolio:build:production",
-          "dev": false
-        }
-      }
-    },
-    "export": {
-      "executor": "@nx/next:export",
-      "options": {
-        "buildTarget": "portfolio:build:production"
-      }
-    },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
-      "options": {
-        "jestConfig": "apps/portfolio/jest.config.ts"
-      }
-    },
-    "lint": {
-      "executor": "@nx/eslint:lint"
-    },
-    "version": {
-      "executor": "@jscutlery/semver:version",
-      "options": {
-        "preset": "conventionalcommits"
+        "cwd": "dist/apps/portfolio",
+        "command": "next start"
       }
     }
   }

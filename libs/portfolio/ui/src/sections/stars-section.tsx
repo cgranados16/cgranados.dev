@@ -1,5 +1,5 @@
 'use client';
-import { StarField } from '../components/star-field.jsx';
+import { StarField } from '../components/star-field';
 import { motion } from 'framer-motion';
 
 type StarFieldContainerProps = {

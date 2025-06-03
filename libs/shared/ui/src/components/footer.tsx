@@ -1,6 +1,9 @@
 'use client';
 import Link from 'next/link';
-import { siteConfig } from '@cgranados.dev/shared/config';
+import { siteConfig } from '../lib/site';
+import { Icons } from './icons';
+import { cn } from '../lib/utils';
+import { buttonVariants } from './button';
 
 export const Footer = () => {
   return (
@@ -18,7 +21,7 @@ export const Footer = () => {
           </Link>
           . The source code is available on{' '}
           <a
-            href={siteConfig.links.github}
+            href={siteConfig.links.github_source_code}
             target="_blank"
             rel="noreferrer"
             className="font-medium underline underline-offset-4"
@@ -27,6 +30,39 @@ export const Footer = () => {
           </a>
           .
         </p>
+        <div className="flex items-center">
+          <p className="text-center text-sm leading-loose text-muted-foreground md:text-left mr-2">
+            Follow me on:
+          </p>
+          <Link
+            href={siteConfig.links.instagram}
+            target="_blank"
+            rel="noreferrer"
+            className={cn(
+              buttonVariants({
+                variant: 'ghost',
+              }),
+              'w-9 px-0 text-muted-foreground mr-2'
+            )}
+          >
+            <Icons.Instagram className="h-6 w-6" />
+            <span className="sr-only">Instagram</span>
+          </Link>
+          <Link
+            href={siteConfig.links.github}
+            target="_blank"
+            rel="noreferrer"
+            className={cn(
+              buttonVariants({
+                variant: 'ghost',
+              }),
+              'w-9 px-0 text-muted-foreground'
+            )}
+          >
+            <Icons.GitHub className="h-6 w-6" />
+            <span className="sr-only">Github</span>
+          </Link>
+        </div>
       </div>
     </footer>
   );

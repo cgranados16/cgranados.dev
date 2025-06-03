@@ -1,7 +1,7 @@
 import {
+  FeaturesSection,
   Hero,
   StarsSection,
-  FeaturesSection,
 } from '@cgranados.dev/portfolio/ui';
 
 export default async function Index() {
@@ -15,7 +15,7 @@ export default async function Index() {
       <Hero />
       <StarsSection />
       <FeaturesSection />
-      <div className="h-screen bg-red-950 mt-36"></div>
+      <div className="mt-36 h-screen bg-red-950"></div>
     </div>
   );
 }

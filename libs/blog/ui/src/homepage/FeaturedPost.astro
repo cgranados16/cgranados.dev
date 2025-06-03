@@ -1,0 +1,52 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  post: CollectionEntry<'posts'>;
+}
+
+const { post } = Astro.props;
+
+// Helper function to format dates
+const formatDate = (date: Date) => {
+  return new Intl.DateTimeFormat('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  }).format(date);
+};
+---
+
+<a href={`/posts/${post.slug}/`}>
+  <div
+    class="mx-auto grid grid-cols-1 gap-8 px-4 md:grid-cols-2 md:gap-12 md:px-6 lg:gap-16 lg:px-8"
+  >
+    <div>
+      <Image
+        src={post.data.image.url}
+        alt={post.data.image.alt}
+        width={800}
+        height={500}
+        class="h-64 w-full rounded-lg object-cover md:h-auto"
+        loading="eager"
+        fetchpriority="high"
+      />
+    </div>
+    <div class="space-y-4 md:space-y-6">
+      <div class="space-y-2">
+        <div
+          class="inline-block rounded-full bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800"
+        >
+          Featured
+        </div>
+        <h2 class="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+          {post.data.title}
+        </h2>
+      </div>
+      <p class="max-w-[700px] text-gray-500 dark:text-gray-400">
+        {post.data.description}
+      </p>
+    </div>
+  </div>
+</a>

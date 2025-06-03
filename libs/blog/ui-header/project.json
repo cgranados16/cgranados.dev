@@ -1,0 +1,12 @@
+{
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "name": "blog-ui-header",
+  "tags": ["scope:blog", "type:ui"],
+  "sourceRoot": "libs/blog/ui-header/src",
+  "projectType": "library",
+  "targets": {
+    "check": {
+      "executor": "@nxtensions/astro:check"
+    }
+  }
+}
