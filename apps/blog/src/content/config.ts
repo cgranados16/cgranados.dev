@@ -6,6 +6,8 @@ const postCollection = defineCollection({
   schema: ({ image }) => z.object({
     title: z.string(),
     pubDate: z.date(),
+    created: z.date(),
+    updated: z.date().optional(),
     description: z.string(),
     image: z.object({
       url: image().refine((img) => img.width >= 1080, {
