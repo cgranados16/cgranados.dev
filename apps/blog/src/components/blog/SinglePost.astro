@@ -1,17 +1,27 @@
 ---
 import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
+
 interface Props {
   post: CollectionEntry<'posts'>;
 }
 
 const { post } = Astro.props;
+
+// Helper function to format dates
+const formatDate = (date: Date) => {
+  return new Intl.DateTimeFormat('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  }).format(date);
+};
 ---
 
 <section class="mx-auto py-8 sm:py-16 lg:py-20">
   <article>
     <header
-      class="mx-auto mb-2 mt-0 flex max-w-3xl flex-col justify-between px-4 sm:flex-row sm:items-center sm:px-6"
+      class="mx-auto mb-2 mt-0 flex max-w-3xl flex-col justify-between px-4 sm:px-6"
     >
       <h1
         class="leading-tighter font-heading mx-auto max-w-3xl px-4 text-4xl font-bold tracking-tighter sm:px-6 md:text-5xl"
@@ -24,8 +34,8 @@ const { post } = Astro.props;
     >
       <figure>
         <Image
-          src={post.data.image?.url}
-          alt={post.data.image?.alt}
+          src={post.data.image.url}
+          alt={post.data.image.alt}
           class="h-auto max-h-96 w-full object-cover transition-all duration-500 group-hover:scale-[1.02]"
           decoding="async"
           height="700"
@@ -33,6 +43,14 @@ const { post } = Astro.props;
           width="1249"
         />
       </figure>
+      <div class="not-prose mb-6 mt-4 flex flex-col gap-1 text-sm text-gray-600 dark:text-gray-400">
+        <span>Created: {formatDate(post.data.created)}</span>
+        {post.data.updated && (
+          <span class="text-orange-600 dark:text-orange-400">
+            Updated: {formatDate(post.data.updated)}
+          </span>
+        )}
+      </div>
       <slot />
     </div>
   </article>

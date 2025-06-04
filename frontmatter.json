@@ -29,6 +29,17 @@
           "isPublishDate": true
         },
         {
+          "title": "Created date",
+          "name": "created",
+          "type": "datetime",
+          "default": "{{now}}"
+        },
+        {
+          "title": "Updated date",
+          "name": "updated",
+          "type": "datetime"
+        },
+        {
           "title": "Image",
           "type": "fields",
           "name": "image",
