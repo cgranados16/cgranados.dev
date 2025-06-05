@@ -25,6 +25,6 @@
     "../../dist/apps/portfolio/.next/types/**/*.ts",
     "next-env.d.ts",
     ".next/types/**/*.ts"
-  ],
+, "postcss.config.mjs", "next.config.mjs"  ],
   "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.ts"]
 }

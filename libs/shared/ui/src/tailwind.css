@@ -1,5 +1,5 @@
 @import 'tailwindcss';
-
+@source './components/**/*.{ts,tsx}';
 @plugin 'tailwindcss-animate';
 
 @custom-variant dark (&:where(.dark, .dark *));
@@ -40,6 +40,7 @@
   --animate-accordion-up: accordion-up 0.2s ease-out;
 
   --container-2xl: 1400px;
+  --breakpoint-lg: 1024px;
   --breakpoint-2xl: 1400px;
 }
 
