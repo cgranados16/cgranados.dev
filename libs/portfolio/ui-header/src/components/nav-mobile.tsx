@@ -30,7 +30,7 @@ export const NavMobile = () => {
 
           <SheetFooter>
             <div className="flex items-center justify-center">
-              <p className="text-center text-sm leading-loose text-muted-foreground mr-2 [&:not(:first-child)]:mt-6">
+              <p className="text-center text-sm leading-loose text-muted-foreground mr-2 not-first:mt-6">
                 Follow me on:
               </p>
               <div className="flex text-muted-foreground">

@@ -13,7 +13,7 @@ import { useClickAway } from 'react-use';
 const MenuFooter = () => (
   <SheetFooter>
     <div className="flex items-center justify-center">
-      <p className="text-muted-foreground mr-2 text-center text-sm leading-loose [&:not(:first-child)]:mt-6">
+      <p className="text-muted-foreground mr-2 text-center text-sm leading-loose not-first:mt-6">
         Follow me on:
       </p>
       <div className="text-muted-foreground flex">
