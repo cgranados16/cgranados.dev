@@ -21,6 +21,13 @@
         "cwd": "dist/apps/portfolio",
         "command": "next start"
       }
+    },
+    "dev": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "apps/portfolio",
+        "command": "next dev --turbopack"
+      }
     }
   }
 }

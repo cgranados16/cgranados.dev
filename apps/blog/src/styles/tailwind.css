@@ -1,0 +1,4 @@
+@import '../../../../libs/shared/ui/src/tailwind.css';
+@source '../components/**/*.{astro,ts,tsx}';
+@source '../../../../libs/shared/**/*.{ts,tsx}';
+@source '../../../../libs/blog/**/*.{astro,ts,tsx}';

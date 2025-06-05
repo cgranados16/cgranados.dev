@@ -1,7 +1,7 @@
 import { siteConfig } from '../lib/site';
+import { cn } from '../lib/utils';
 import { buttonVariants } from './button';
 import { getIcon } from './icons';
-import { cn } from '../lib/utils';
 
 interface IconProps {
   label: string;
@@ -17,7 +17,7 @@ function renderIcon(props: IconProps) {
         buttonVariants({
           variant: 'ghost',
         }),
-        'w-9 px-0'
+        'w-9 px-0',
       )}
     >
       {getIcon(props.label, 'h-5 w-5')}

@@ -1,19 +1,25 @@
 'use client';
+import {
+  Button,
+  Sheet,
+  SheetContent,
+  SheetFooter,
+  SheetTrigger,
+  SocialMediaIcons,
+} from '@cgranados.dev/shared/ui';
+import { createHeaderConfig } from '@cgranados.dev/shared/ui-header';
+import { Squash as Hamburger } from 'hamburger-react';
+import Link from 'next/link';
 import { useRef, useState } from 'react';
 import { useClickAway } from 'react-use';
-import { Squash as Hamburger } from 'hamburger-react';
-import { Button } from '@cgranados.dev/shared/ui';
-import { Sheet, SheetContent, SheetFooter, SheetTrigger } from '@cgranados.dev/shared/ui';
-import { SocialMediaIcons } from '@cgranados.dev/shared/ui';
-
-import Link from 'next/link';
 
 export const NavMobile = () => {
   const [isOpen, setOpen] = useState(false);
   const ref = useRef(null);
+  const config = createHeaderConfig('portfolio');
 
   useClickAway(ref, () => setOpen(false));
-  const blogUrl = process.env.NEXT_PUBLIC_APP_BLOG_URL || '';
+
   return (
     <div className="lg:hidden">
       <Sheet>
@@ -21,19 +27,39 @@ export const NavMobile = () => {
           <Hamburger toggled={isOpen} size={25} toggle={setOpen} />
         </SheetTrigger>
         <SheetContent ref={ref}>
-          <div className="flex flex-col mb-12">
-            <Link href={blogUrl}>
-              <Button variant="ghost">Blog</Button>
-            </Link>
-            <hr />
+          <div className="mb-12 flex flex-col">
+            {config.links.map((link) => (
+              <div key={link.label}>
+                {link.external || link.href.startsWith('http') ? (
+                  <a href={link.href}>
+                    <Button
+                      variant="ghost"
+                      className="w-full justify-start text-left"
+                    >
+                      {link.label}
+                    </Button>
+                  </a>
+                ) : (
+                  <Link href={link.href}>
+                    <Button
+                      variant="ghost"
+                      className="w-full justify-start text-left"
+                    >
+                      {link.label}
+                    </Button>
+                  </Link>
+                )}
+                <hr />
+              </div>
+            ))}
           </div>
 
           <SheetFooter>
             <div className="flex items-center justify-center">
-              <p className="text-center text-sm leading-loose text-muted-foreground mr-2 [&:not(:first-child)]:mt-6">
+              <p className="text-muted-foreground mr-2 text-center text-sm leading-loose not-first:mt-6">
                 Follow me on:
               </p>
-              <div className="flex text-muted-foreground">
+              <div className="text-muted-foreground flex">
                 <SocialMediaIcons />
               </div>
             </div>

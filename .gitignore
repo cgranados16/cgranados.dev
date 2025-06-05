@@ -39,7 +39,7 @@ testem.log
 Thumbs.db
 
 .nx/cache
-.nx/workspace-data/
+.nx/workspace-data
 
 # Next.js
 .next
@@ -48,5 +48,7 @@ Thumbs.db
 .env
 .env.local
 .env.development
+
 .cursor/rules/nx-rules.mdc
+.github/instructions/nx.instructions.md
 .vercel

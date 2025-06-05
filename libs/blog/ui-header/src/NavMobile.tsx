@@ -1,11 +1,12 @@
-import { Button } from '@cgranados.dev/shared/ui/components/button';
 import {
+  Button,
   Sheet,
   SheetContent,
   SheetFooter,
   SheetTrigger,
-} from '@cgranados.dev/shared/ui/components/sheet/sheet';
-import { SocialMediaIcons } from '@cgranados.dev/shared/ui/components/social-media-icons';
+  SocialMediaIcons,
+} from '@cgranados.dev/shared/ui';
+import { createHeaderConfig } from '@cgranados.dev/shared/ui-header';
 import { Squash as Hamburger } from 'hamburger-react';
 import { useRef, useState } from 'react';
 import { useClickAway } from 'react-use';
@@ -13,7 +14,7 @@ import { useClickAway } from 'react-use';
 const MenuFooter = () => (
   <SheetFooter>
     <div className="flex items-center justify-center">
-      <p className="text-muted-foreground mr-2 text-center text-sm leading-loose [&:not(:first-child)]:mt-6">
+      <p className="text-muted-foreground mr-2 text-center text-sm leading-loose not-first:mt-6">
         Follow me on:
       </p>
       <div className="text-muted-foreground flex">
@@ -26,8 +27,10 @@ const MenuFooter = () => (
 export const NavMobile = () => {
   const [isOpen, setOpen] = useState(false);
   const ref = useRef(null);
+  const config = createHeaderConfig('blog');
 
   useClickAway(ref, () => setOpen(false));
+
   return (
     <div className="lg:hidden">
       <Sheet>
@@ -41,15 +44,19 @@ export const NavMobile = () => {
         </SheetTrigger>
         <SheetContent ref={ref}>
           <div className="mb-12 flex flex-col">
-            <a href={import.meta.env.PUBLIC_APP_BLOG_URL}>
-              <Button
-                variant="ghost"
-                className="w-full justify-start text-left"
-              >
-                Blog
-              </Button>
-            </a>
-            <hr />
+            {config.links.map((link) => (
+              <div key={link.label}>
+                <a href={link.href}>
+                  <Button
+                    variant="ghost"
+                    className="w-full justify-start text-left"
+                  >
+                    {link.label}
+                  </Button>
+                </a>
+                <hr />
+              </div>
+            ))}
           </div>
           <MenuFooter />
         </SheetContent>

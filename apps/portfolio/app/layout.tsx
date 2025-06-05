@@ -1,8 +1,8 @@
 import { ThemeProvider } from '@cgranados.dev/portfolio/ui';
 import { Header } from '@cgranados.dev/portfolio/ui-header';
 import { Footer, cn } from '@cgranados.dev/shared/ui';
-import '@cgranados.dev/shared/ui/tailwind.css';
 import { Inter as FontSans } from 'next/font/google';
+import './globals.css';
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -34,9 +34,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
-          <div className="flex-1">{children}</div>
-          <Footer />
+          <div className="relative flex min-h-screen flex-col">
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </div>
         </ThemeProvider>
       </body>
     </html>
