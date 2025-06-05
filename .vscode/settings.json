@@ -1,6 +1,19 @@
 {
   "conventionalCommits.scopes": [
-    "blog"
+    "blog",
+    "portfolio"
   ],
-  "nxConsole.generateAiAgentRules": true
+  "nxConsole.generateAiAgentRules": true,
+  "css.customData": [".vscode/tailwind.json"],
+  "// activates tailwindcss intellisense for libraries": "",
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "css.validate": false,
+  "editor.inlineSuggest.enabled": true,
+  "// adds tailwindcss intellisense support within cva function calls": "",
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(((?:[^()]|\\([^()]*\\))*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cx\\(((?:[^()]|\\([^()]*\\))*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ]
 }
